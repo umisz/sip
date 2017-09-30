@@ -11,83 +11,37 @@
                     <div class="row">
                         <div class="col-lg-12">
                             <div class="col-lg-12">
-                                <form role="form">
+                                <form method ="POST" action="<?php echo base_url()."index.php/Ibu_hamil/doUpdate/"?>">
                                     <div class="form-group">
-                                        <label for="disabledSelect">No ID</label>
-                                        <input class="form-control" id="disabledInput" type="text" placeholder="001" disabled>
-                                    </div>
-                                </form>
-                            </div>
-                        </div>
-                        <div class="col-lg-12">
-                            <div class="col-lg-6">
-                                <form role="form">
-                                    <div class="form-group">
-                                        <label>Nama Ibu Hamil</label><input class="form-control">
-                                    </div>
-                                </form>
-                            </div>
-                            <div class="col-lg-6">
-                                <form role="form">
-                                    <div class="form-group">
-                                        <label>Nama Suami</label><input class="form-control">
-                                    </div>
-                                </form>
-                            </div>
-                        </div>
-                        <div class="col-lg-12">
-                            <div class="col-lg-6">
-                                <form role="form">
-                                    <div class="form-group">
-                                        <label>Tempat Lahir</label><input class="form-control">
-                                    </div>
-                                </form>
-                            </div>
-                            <div class="col-lg-6">
-                                <form role="form">
-                                    <div class="form-group">
-                                        <label>Nama Orang Tua</label><input class="form-control">
-                                    </div>
-                                </form>
-                            </div>
-                        </div>
-                        <div class="col-lg-12">
-                            <div class="col-lg-6">
-                                <form role="form">
-                                    <div class="form-group">
-                                        <label>Tanggal Lahir</label><input class="form-control">
-                                    </div>
-                                </form>
-                            </div>
-                            <div class="col-lg-6">
-                                <form role="form">
-                                    <div class="form-group">
-                                        <label>Alamat</label><input class="form-control">
-                                    </div>
-                                </form>
-                            </div>
-                        </div>
-                        <div class="col-lg-12">
-                            <div class="col-lg-6">
-                                <form role="form">
-                                    <div class="form-group">
-                                        <label>Umur</label><input class="form-control">
-                                    </div>
-                                </form>
-                            </div>
-                            <div class="col-lg-6">
-                                <form role="form">
-                                    <div class="form-group">
-                                        <label>Usia Kandungan</label><input class="form-control">
-                                    </div>
-                                </form>
-                            </div>
-                        </div>
-                        <div class="col-lg-12">
-                            <div class="col-lg-12">
-                                <form role="form">
-                                    <div class="form-group">
-                                        <button type="button" class="btn btn-primary btn-lg btn-block">Simpan Data Ibu Hamil</button>
+                                        <div class="col-lg-4">
+                                            <label for="disabledSelect">No ID</label>
+                                            <input class="form-control" id="disabledInput" name="idIbu" value="<?php echo $idIbu; ?>" placeholder="<?php echo $idIbu; ?>" readonly>
+                                            <br>
+                                            <label>Minggu Kehamilan</label>
+                                            <input class="form-control" name ="usiaKandungan" type="text" required>
+                                            <br>
+                                            <label>Tinggi Badan</label>
+                                            <br>
+                                            <div class="col-lg-6">
+                                                <input class="form-control" name ="tinggiIbu" type="text" required>
+                                            </div>
+                                            <div class="col-lg-6">
+                                                <h4><strong>cm</strong></h4>
+                                            </div>
+                                            <br>
+                                            <br>
+                                            <label>Berat Badan </label>
+                                            <br>
+                                            <div class="col-lg-6">
+                                                <input class="form-control" name ="beratUpdate" type="text" required>
+                                            </div>
+                                            <div class="col-lg-6">
+                                                <h4><strong>kg</strong></h4>
+                                            </div>
+                                            <br>
+                                            <br>
+                                            <button type="button submit" class="btn btn-primary">Perbarui Data</button>
+                                        </div>
                                     </div>
                                 </form>
                             </div>

@@ -64,7 +64,7 @@
                                     </tr>
                                 </table>
                             </div>
-                            <div class="col-lg-8">
+                            <div class="col-lg-10">
                                 <div class="col-lg-4">
                                     <h4><strong>Tinggi Badan : </strong></h4>
                                     <br>
@@ -79,7 +79,7 @@
                                     <p><?php echo $beratUpdate; ?> kg</p>
                                 </div>
                             </div>
-                            <div class="col-lg-6">
+                            <div class="col-lg-4">
                                 <h4><strong>Kondisi Kehamilan : </strong></h4>
                                 <p><?php echo $status; ?></p>
                             </div>
@@ -87,8 +87,8 @@
                         <br><br>
                         <p style="text-align: right;">
                             <a href="<?php echo base_url()."index.php/Ibu_hamil/index"; ?>"><button type="button" class="btn btn-primary">Kembali</button>
-                            <a href="<?php echo base_url()."index.php/Ibu_hamil/edit"; ?>"><button type="button" class="btn btn-warning">Edit</button>
-                            <a href="<?php echo base_url()."index.php/Ibu_hamil/delete"; ?>"><button type="button" class="btn btn-danger">Hapus</button>
+                            <a href="<?php echo base_url()."index.php/Ibu_hamil/edit/".$idIbu; ?>"><button type="button" class="btn btn-warning">Edit</button>
+                            <a href="<?php echo base_url()."index.php/Ibu_hamil/delete/".$idIbu; ?>"><button type="button" class="btn btn-danger">Hapus</button>
                         </p>
                     </div>
                 </div>

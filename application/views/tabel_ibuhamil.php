@@ -27,8 +27,8 @@
                                 <td style="text-align: center;"><?php echo $b['usiaKandungan'];?></td>
                                 <td style="text-align: center;">
                                     <a href="<?php echo base_url()."index.php/Ibu_hamil/detail/".$b['idIbu']; ?>" style="text-decoration: none" title="Informasi Lengkap"><button type="button" class="btn btn-primary btn-circle"><i class="fa fa-list"></i></button>
-                                    <a href="<?php echo base_url()."index.php/Ibu_hamil/edit"; ?>" style="text-decoration: none" title="Ubah Data"><button type="button" class="btn btn-warning btn-circle"><i class="fa fa-pencil"></i></button>
-                                    <a href="<?php echo base_url()."index.php/Bayi/delete"; ?>" style="text-decoration: none" title="Hapus Data"><button type="button" class="btn btn-danger btn-circle"><i class="fa fa-times"></i></button>
+                                    <a href="<?php echo base_url()."index.php/Ibu_hamil/edit/".$b['idIbu']; ?>" style="text-decoration: none" title="Ubah Data"><button type="button" class="btn btn-warning btn-circle"><i class="fa fa-pencil"></i></button>
+                                    <a href="<?php echo base_url()."index.php/Ibu_hamil/delete/".$b['idIbu']; ?>" style="text-decoration: none" title="Hapus Data"><button type="button" class="btn btn-danger btn-circle"><i class="fa fa-times"></i></button>
                                 </td>
                             </tr>
                             <?php }?>
