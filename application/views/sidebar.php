@@ -3,10 +3,10 @@
                 <div class="sidebar-nav navbar-collapse">
                     <ul class="nav" id="side-menu">
                         <li>
-                            <a href="<?php echo base_url()."index.php/Bayi/index"; ?>"; style="color: #d43d21"; >Data Bayi</a>
+                            <a href="<?php echo base_url()."index.php/Bayi"; ?>"; style="color: #d43d21"; >Data Bayi</a>
                         </li>
                         <li>
-                            <a href="<?php echo base_url()."index.php/Ibu_hamil/index"; ?>"; style="color: #d43d21">Data Ibu Hamil</a>
+                            <a href="<?php echo base_url()."index.php/Ibu_hamil"; ?>"; style="color: #d43d21">Data Ibu Hamil</a>
                         </li>
                     </ul>
                 </div>
