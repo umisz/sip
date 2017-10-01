@@ -25,15 +25,15 @@
                                         <td style="text-align: center;">Umis</td>
                                         <td style="text-align: center;">Umis</td>
                                         <td style="text-align: center;">
-                                            <a href="<?php echo base_url()."index.php/Bayi/detail"; ?>"><button type="button" class="btn btn-primary btn-circle"><i class="fa fa-list"></i></button>
-                                            <a href="<?php echo base_url()."index.php/Bayi/edit"; ?>"><button type="button" class="btn btn-warning btn-circle"><i class="fa fa-pencil"></i></button>
-                                            <a href="<?php echo base_url()."index.php/Bayi/delete"; ?>"><button type="button" class="btn btn-danger btn-circle"><i class="fa fa-times"></i></button>
+                                            <a href="<?php echo base_url()."/Bayi/detail"; ?>"><button type="button" class="btn btn-primary btn-circle"><i class="fa fa-list"></i></button>
+                                            <a href="<?php echo base_url()."/Bayi/edit"; ?>"><button type="button" class="btn btn-warning btn-circle"><i class="fa fa-pencil"></i></button>
+                                            <a href="<?php echo base_url()."/Bayi/delete"; ?>"><button type="button" class="btn btn-danger btn-circle"><i class="fa fa-times"></i></button>
                                         </td>
                                     </tr>
                                 </tbody>
                             </table>
                             <p>
-                                <a href="<?php echo base_url()."index.php/Bayi/add"; ?>"><button type="button" class="btn btn-primary">Tambah</button>
+                                <a href="<?php echo base_url()."/Bayi/add"; ?>"><button type="button" class="btn btn-primary">Tambah</button>
                             </p>
                         </div>
                     </div>

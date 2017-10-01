@@ -39,9 +39,9 @@
                         </div>
                         <br><br>
                         <p style="text-align: right;">
-                            <a href="<?php echo base_url()."index.php/Bayi/index"; ?>"><button type="button" class="btn btn-primary">Kembali</button>
-                            <a href="<?php echo base_url()."index.php/Bayi/edit"; ?>"><button type="button" class="btn btn-warning">Edit</button>
-                            <a href="<?php echo base_url()."index.php/Bayi/delete"; ?>"><button type="button" class="btn btn-danger">Hapus</button>
+                            <a href="<?php echo base_url()."/Bayi/index"; ?>"><button type="button" class="btn btn-primary">Kembali</button>
+                            <a href="<?php echo base_url()."/Bayi/edit"; ?>"><button type="button" class="btn btn-warning">Edit</button>
+                            <a href="<?php echo base_url()."/Bayi/delete"; ?>"><button type="button" class="btn btn-danger">Hapus</button>
                         </p>
                     </div>
                 </div>

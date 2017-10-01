@@ -86,9 +86,9 @@
                         </div>
                         <br><br>
                         <p style="text-align: right;">
-                            <a href="<?php echo base_url()."index.php/Ibu_hamil/index"; ?>"><button type="button" class="btn btn-primary">Kembali</button>
-                            <a href="<?php echo base_url()."index.php/Ibu_hamil/edit/".$idIbu; ?>"><button type="button" class="btn btn-warning">Edit</button>
-                            <a href="<?php echo base_url()."index.php/Ibu_hamil/delete/".$idIbu; ?>"><button type="button" class="btn btn-danger">Hapus</button>
+                            <a href="<?php echo base_url()."/Ibu_hamil/index"; ?>"><button type="button" class="btn btn-primary">Kembali</button>
+                            <a href="<?php echo base_url()."/Ibu_hamil/edit/".$idIbu; ?>"><button type="button" class="btn btn-warning">Edit</button>
+                            <a href="<?php echo base_url()."/Ibu_hamil/delete/".$idIbu; ?>"><button type="button" class="btn btn-danger">Hapus</button>
                         </p>
                     </div>
                 </div>
