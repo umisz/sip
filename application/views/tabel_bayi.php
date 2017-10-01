@@ -11,7 +11,7 @@
                             <table width="100%" class="table table-striped table-bordered table-hover" id="dataTables-example">
                                 <thead>
                                     <tr style="font-size: 14px">
-                                        <th style="text-align: center;">No</th>
+                                        <th style="text-align: center;">ID</th>
                                         <th style="text-align: center;">Nama Bayi</th>
                                         <th style="text-align: center;">Nama Ibu</th>
                                         <th style="text-align: center;">Nama Ayah</th>
@@ -19,17 +19,19 @@
                                     </tr>
                                 </thead>
                                 <tbody>
+                                    <?php foreach($bayi as $b){?>
                                     <tr style="font-size: 14px">
-                                        <td style="text-align: center;">1</td>
-                                        <td style="text-align: center;">Umis</td>
-                                        <td style="text-align: center;">Umis</td>
-                                        <td style="text-align: center;">Umis</td>
+                                        <td style="text-align: center;"><?php echo $b['idBalita']; ?></td>
+                                        <td style="text-align: center;"><?php echo $b['namaBayi']; ?></td>
+                                        <td style="text-align: center;"><?php echo $b['namaIbu']; ?></td>
+                                        <td style="text-align: center;"><?php echo $b['namaAyah']?></td>
                                         <td style="text-align: center;">
-                                            <a href="<?php echo base_url()."index.php/Bayi/detail"; ?>"><button type="button" class="btn btn-primary btn-circle"><i class="fa fa-list"></i></button>
-                                            <a href="<?php echo base_url()."index.php/Bayi/edit"; ?>"><button type="button" class="btn btn-warning btn-circle"><i class="fa fa-pencil"></i></button>
-                                            <a href="<?php echo base_url()."index.php/Bayi/delete"; ?>"><button type="button" class="btn btn-danger btn-circle"><i class="fa fa-times"></i></button>
+                                            <a href="<?php echo base_url()."index.php/Bayi/detail/".$b['idBalita']; ?>" style="text-decoration: none;" title="Informasi Lengkap"><button type="button" class="btn btn-primary btn-circle"><i class="fa fa-list"></i></button>
+                                            <a href="<?php echo base_url()."index.php/Bayi/edit/".$b['idBalita']; ?>" style="text-decoration: none;" title="Ubah Data"><button type="button" class="btn btn-warning btn-circle"><i class="fa fa-pencil"></i></button>
+                                            <a href="<?php echo base_url()."index.php/Bayi/delete/".$b['idBalita']; ?>" style="text-decoration: none;" title="Hapus Data"><button type="button" class="btn btn-danger btn-circle"><i class="fa fa-times"></i></button>
                                         </td>
                                     </tr>
+                                    <?php } ?>
                                 </tbody>
                             </table>
                             <p>

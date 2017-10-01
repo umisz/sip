@@ -14,7 +14,7 @@ class Ibu_hamil extends CI_Controller {
         $this->load->model('ModelPosyandu');
     }
     public function hitungBBIdeal($id){
-		$data = $this->ModelPosyandu->getData('ibuhamil','where idIbu = '.$id);
+		$data = $this->ModelPosyandu->getData('ibuhamil','*','where idIbu = '.$id);
 		$tinggiIbu = $data[0]['tinggiIbu'];
 		$usiaKandungan = $data[0]['usiaKandungan'];
 		$beratUpdate = $data[0]['beratUpdate'];
@@ -39,7 +39,7 @@ class Ibu_hamil extends CI_Controller {
 		return $status;
 	}
 	public function index(){
-		$bumil = $this->ModelPosyandu->getData('ibuhamil');
+		$bumil = $this->ModelPosyandu->getData('ibuhamil','*');
 		$this->load->view('header');	
 		$this->load->view('sidebar');
 		$this->load->view('tabel_ibuhamil',array('bumil'=>$bumil));
@@ -48,9 +48,6 @@ class Ibu_hamil extends CI_Controller {
 		$this->load->view('header');	
 		$this->load->view('sidebar');
 		$this->load->view('form_ibuhamil');
-	}
-	public function naegele(){
-
 	}
 	public function processAdd(){
 		$idIbu = $_POST['idIbu'];
@@ -117,7 +114,7 @@ class Ibu_hamil extends CI_Controller {
 		}
 	}
 	public function detail($id){
-		$data = $this->ModelPosyandu->getData('ibuhamil','where idIbu = '.$id);
+		$data = $this->ModelPosyandu->getData('ibuhamil','*','where idIbu = '.$id);
 		$status = $this->hitungBBIdeal($id);
 		$dataIbu = array('idIbu' => $data[0]['idIbu'],
 			'namaBumil'=>$data[0]['namaBumil'], 'namaSuami'=>$data[0]['namaSuami'],
@@ -135,7 +132,7 @@ class Ibu_hamil extends CI_Controller {
 	}
 
 	public function edit($id){
-		$data = $this->ModelPosyandu->getData('ibuhamil','where idIbu = '.$id);
+		$data = $this->ModelPosyandu->getData('ibuhamil','*','where idIbu = '.$id);
 		$dataIbu = array('idIbu' => $data[0]['idIbu']);
 		$this->load->view('header');	
 		$this->load->view('sidebar');

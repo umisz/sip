@@ -7,41 +7,82 @@
                         <div class="panel-body">
                             <div class="row">
                                 <div class="col-lg-12">
+                                    <h2>Informasi Pribadi</h2>
+                                    <hr>
                                     <div class="col-lg-6">
-                                        <h4><strong>Nama Bayi</strong></h4>
-                                        <p>Imam Teguh Islamy</p>
+                                        <h4><strong>ID Bayi</strong></h4>
+                                        <p><?php echo $idBalita; ?></p>
                                     </div>
                                     <div class="col-lg-6">
-                                        <h4><strong>Nama Ibu</strong></h4>
-                                        <p>Imam Teguh Islamy</p>
+                                        <h4><strong>Nama Bayi</strong></h4>
+                                        <p><?php echo $namaBayi; ?></p>
                                     </div>
                                 </div>
                                 <div class="col-lg-12">
                                     <div class="col-lg-6">
-                                        <h4><strong>Tempat Lahir</strong></h4>
-                                        <p>Imam Teguh Islamy</p>
+                                        <h4><strong>Nama Ibu</strong></h4>
+                                        <p><?php echo $namaIbu; ?></p>
                                     </div>
                                     <div class="col-lg-6">
                                         <h4><strong>Nama Ayah</strong></h4>
-                                        <p>Imam Teguh Islamy</p>
+                                        <p><?php echo $namaAyah; ?></p>
                                     </div>
                                 </div>
                                 <div class="col-lg-12">
-                                    <div class="col-lg-6">
-                                        <h4><strong>Tanggal Lahir</strong></h4>
-                                        <p>Imam Teguh Islamy</p>
+                                    <div class="col-lg-3">
+                                        <h4><strong>Tempat Lahir</strong></h4>
+                                        <p><?php echo $tempatLahir; ?></p>
                                     </div>
-                                <div class="col-lg-6">
-                                    <h4><strong>Alamat</strong></h4>
-                                    <p>Imam Teguh Islamy</p>
+                                    <div class="col-lg-3">
+                                        <h4><strong>Tanggal Lahir</strong></h4>
+                                        <p><?php echo $tanggalLahir; ?></p>
+                                    </div>
+                                    <div class="col-lg-3">
+                                        <h4><strong>Jenis Kelamin </strong></h4>
+                                        <p><?php echo $jenisKelamin; ?></p>
+                                    </div>
+                                    <div class="col-lg-3">
+                                        <h4><strong>Anak Ke </strong></h4>
+                                        <p><?php echo $anakKe; ?></p>
+                                    </div>
+                                </div>
+                                <div class="col-lg-12">
+                                    <div class="col-lg-12">
+                                        <h4><strong>Alamat Lengkap  </strong></h4>
+                                        <p><?php echo $alamatOrtu; ?></p>
+                                    </div>
+                                </div>
+                                <div class="col-lg-12">
+                                    <h2>Informasi Kesehatan</h2>
+                                    <hr>
+                                    <div class="col-lg-6">
+                                        <h4><strong>Golongan Darah </strong></h4>
+                                        <p><?php echo $golonganDarah; ?></p>
+                                    </div>
+                                    <div class="col-lg-3">
+                                        <h4><strong>Panjang Lahir </strong></h4>
+                                        <p><?php echo $panjangLahir; ?> cm</p>
+                                    </div>
+                                    <div class="col-lg-3">
+                                        <h4><strong>Berat Lahir </strong></h4>
+                                        <p><?php echo $beratLahir; ?> kg</p>
+                                    </div>
+                                    <div class="col-lg-3">
+                                        <h4><strong>Panjang Sekarang </strong></h4>
+                                        <p><?php echo $panjangSekarang; ?> cm</p>
+                                    </div>
+                                    <div class="col-lg-3">
+                                        <h4><strong>Berat Sekarang </strong></h4>
+                                        <p><?php echo $beratSekarang; ?> kg</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                         <br><br>
                         <p style="text-align: right;">
-                            <a href="<?php echo base_url()."index.php/Bayi/index"; ?>"><button type="button" class="btn btn-primary">Kembali</button>
-                            <a href="<?php echo base_url()."index.php/Bayi/edit"; ?>"><button type="button" class="btn btn-warning">Edit</button>
-                            <a href="<?php echo base_url()."index.php/Bayi/delete"; ?>"><button type="button" class="btn btn-danger">Hapus</button>
+                            <a href="<?php echo base_url()."index.php/Bayi"; ?>" style="text-decoration: none;"><button type="button" class="btn btn-primary">Kembali</button>
+                            <a href="<?php echo base_url()."index.php/Bayi/edit/".$idBalita; ?>" style="text-decoration: none;"><button type="button" class="btn btn-warning">Edit</button>
+                            <a href="<?php echo base_url()."index.php/Bayi/delete/".$idBalita; ?>" style="text-decoration: none;"><button type="button" class="btn btn-danger">Hapus</button>
                         </p>
                     </div>
                 </div>

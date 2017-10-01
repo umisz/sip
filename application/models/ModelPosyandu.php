@@ -4,8 +4,8 @@ class ModelPosyandu extends CI_Model {
     public function __construct() {
         $this->load->database();
     }
-    public function getData($tableName,$where=""){
-			$data = $this -> db ->query('SELECT * FROM '.$tableName." ".$where);
+    public function getData($tableName,$data,$where=""){
+			$data = $this -> db ->query('SELECT '.$data.' FROM '.$tableName." ".$where);
 			return $data -> result_array();
 	}
     public function addData($tableName,$data){
