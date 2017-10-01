@@ -22,14 +22,15 @@
         <div class="row">
             <div class="col-md-4 col-md-offset-4">
                 <div class="login-panel panel panel-default">
+                    <img src="<?php echo base_url();?>/assets/images/logo.png" height="100px" align="center">
                     <div class="panel-heading">
-                        <h3 class="panel-title">Please Sign In</h3>
+                        <h3 class="panel-title">Login</h3>
                     </div>
                     <div class="panel-body">
-                        <form role="form">
+                        <form id="login-form" class="text-left" action="<?php echo base_url('login/aksi_login'); ?>" method="post">
                             <fieldset>
                                 <div class="form-group">
-                                    <input class="form-control" placeholder="E-mail" name="email" type="email" autofocus>
+                                    <input type="text" class="form-control" id="lg_username" name="username" placeholder="Username">
                                 </div>
                                 <div class="form-group">
                                     <input class="form-control" placeholder="Password" name="password" type="password" value="">
@@ -40,7 +41,7 @@
                                     </label>
                                 </div>
                                 <!-- Change this to a button or input when using this as a form -->
-                                <a href="<?php echo base_url()."index.php/Bayi"; ?>" class="btn btn-lg btn-success btn-block">Login</a>
+                                <button type="submit" class="btn btn-lg btn-success btn-block" value="login">Login</button>
                             </fieldset>
                         </form>
                     </div>

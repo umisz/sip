@@ -23,12 +23,12 @@
             <!-- Top Menu Items -->
             <ul class="nav navbar-top-links navbar-right">
                 <li class="dropdown">
-                    <a href="<?php echo base_url().'index.php/Welcome/index'?>" style="color: #d43d21"><i class="fa fa-sign-out fa-fw" style="color: #d43d21"></i> Logout</a>
+                    <a href="<?php echo base_url('logout'); ?>" style="color: #d43d21"><i class="fa fa-sign-out fa-fw" style="color: #d43d21"></i> Logout</a>
                 </li>
             </ul>
             <ul class="nav navbar-top-links navbar-right">
                 <li class="dropdown">
-                    <a style="color: #d43d21"><i class="fa fa-user fa-fw" style="color: #d43d21"></i> Admin</a>
+                    <a style="color: #d43d21"><i class="fa fa-user fa-fw" style="color: #d43d21"></i> <?php echo $this->session->userdata("nama"); ?></a>
                 </li>
             </ul>
             
