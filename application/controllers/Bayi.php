@@ -8,6 +8,7 @@ class Bayi extends CI_Controller {
 	public $anakKe;		public $alamatOrtu;
 	public $jenisKelamin;	public $golonganDarah;
 	public $panjangLahir;	public $beratLahir;
+	public $panjangSekarang; 	public $beratSekarang;
 	public function __construct(){
         parent::__construct();
         $this->load->model('ModelPosyandu');
@@ -74,8 +75,8 @@ class Bayi extends CI_Controller {
 			echo "<h2>Galat</h2>";
 		}
 	}
-	public function informasiBayi ($id){
-		$data = $this->ModelPosyandu->getData('balita','*','where idBalita= '.$id);
+	public function informasiBayi ($idBalita){
+		$data = $this->ModelPosyandu->getData('balita','*','where idBalita= '.$idBalita);
 		$jkArr = array('jenisKelamin'=>$data[0]['jenisKelamin']);
 		$golArr = array('golonganDarah'=>$data[0]['golonganDarah']);
 		$kodeJenis = implode("", $jkArr);
@@ -102,15 +103,15 @@ class Bayi extends CI_Controller {
 		return $bayi;
 	}
 
-	public function detail($id){
-		$data = $this->informasiBayi($id);
+	public function detail($idBalita){
+		$data = $this->informasiBayi($idBalita);
 		$this->load->view('header');	
 		$this->load->view('sidebar');
 		$this->load->view('detail_bayi',$data);
 	}
 
-	public function edit($id){
-		$data = $this->informasiBayi($id);
+	public function edit($idBalita){
+		$data = $this->informasiBayi($idBalita);
 		$this->load->view('header');	
 		$this->load->view('sidebar');
 		$this->load->view('edit_bayi',$data);
@@ -132,8 +133,8 @@ class Bayi extends CI_Controller {
 		}
 
 	}
-	public function delete($id){
-		$where = array('idBalita' => $id );
+	public function delete($idBalita){
+		$where = array('idBalita' => $idBalita );
 		$res = $this->ModelPosyandu->HapusData('balita',$where);
 		if($res >=1){
 			redirect('Bayi');

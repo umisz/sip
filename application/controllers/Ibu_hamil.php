@@ -9,12 +9,13 @@ class Ibu_hamil extends CI_Controller {
 	public $tempatLahir;		public $tanggalLahir;
 	public $hpht;				public $perkiraanLahir;
 	public $tinggiIbu;			public $beratAwal;
+	public $beratUpdate;
 	public function __construct() {
         parent::__construct();
         $this->load->model('ModelPosyandu');
     }
-    public function hitungBBIdeal($id){
-		$data = $this->ModelPosyandu->getData('ibuhamil','*','where idIbu = '.$id);
+    public function hitungBBIdeal($idIbu){
+		$data = $this->ModelPosyandu->getData('ibuhamil','*','where idIbu = '.$idIbu);
 		$tinggiIbu = $data[0]['tinggiIbu'];
 		$usiaKandungan = $data[0]['usiaKandungan'];
 		$beratUpdate = $data[0]['beratUpdate'];
@@ -113,9 +114,9 @@ class Ibu_hamil extends CI_Controller {
 			redirect('Ibu_hamil/edit/'.$idIbu);
 		}
 	}
-	public function detail($id){
-		$data = $this->ModelPosyandu->getData('ibuhamil','*','where idIbu = '.$id);
-		$status = $this->hitungBBIdeal($id);
+	public function detail($idIbu){
+		$data = $this->ModelPosyandu->getData('ibuhamil','*','where idIbu = '.$idIbu);
+		$status = $this->hitungBBIdeal($idIbu);
 		$dataIbu = array('idIbu' => $data[0]['idIbu'],
 			'namaBumil'=>$data[0]['namaBumil'], 'namaSuami'=>$data[0]['namaSuami'],
 			'alamatBumil'=>$data[0]['alamatBumil'],'umur'=>$data[0]['umur'],
@@ -131,16 +132,16 @@ class Ibu_hamil extends CI_Controller {
 		$this->load->view('detail_ibuhamil',$dataIbu);
 	}
 
-	public function edit($id){
-		$data = $this->ModelPosyandu->getData('ibuhamil','*','where idIbu = '.$id);
+	public function edit($idIbu){
+		$data = $this->ModelPosyandu->getData('ibuhamil','*','where idIbu = '.$idIbu);
 		$dataIbu = array('idIbu' => $data[0]['idIbu']);
 		$this->load->view('header');	
 		$this->load->view('sidebar');
 		$this->load->view('edit_ibuhamil',$dataIbu);
 	}
 
-	public function delete($id){
-		$where = array('idIbu' => $id );
+	public function delete($idIbu){
+		$where = array('idIbu' => $idIbu );
 		$res = $this->ModelPosyandu->HapusData('ibuhamil',$where);
 		if($res >=1){
 			redirect('Ibu_hamil');

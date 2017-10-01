@@ -35,7 +35,7 @@
                                 </tbody>
                             </table>
                             <p>
-                                <a href="<?php echo base_url()."index.php/Bayi/add"; ?>"><button type="button" class="btn btn-primary">Tambah</button>
+                                <a href="<?php echo base_url()."/Bayi/add"; ?>"><button type="button" class="btn btn-primary">Tambah</button>
                             </p>
                         </div>
                     </div>
