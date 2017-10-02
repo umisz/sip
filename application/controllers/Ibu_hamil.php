@@ -12,6 +12,9 @@ class Ibu_hamil extends CI_Controller {
 	public $beratUpdate;
 	public function __construct() {
         parent::__construct();
+        if($this->session->userdata('status') != "login"){
+			redirect(base_url("Welcome"));
+		}
         $this->load->model('ModelPosyandu');
     }
     public function hitungBBIdeal($idIbu){

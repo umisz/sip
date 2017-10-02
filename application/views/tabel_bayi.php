@@ -26,9 +26,9 @@
                                         <td style="text-align: center;"><?php echo $b['namaIbu']; ?></td>
                                         <td style="text-align: center;"><?php echo $b['namaAyah']?></td>
                                         <td style="text-align: center;">
-                                            <a href="<?php echo base_url()."index.php/Bayi/detail/".$b['idBalita']; ?>" style="text-decoration: none;" title="Informasi Lengkap"><button type="button" class="btn btn-primary btn-circle"><i class="fa fa-list"></i></button>
-                                            <a href="<?php echo base_url()."index.php/Bayi/edit/".$b['idBalita']; ?>" style="text-decoration: none;" title="Ubah Data"><button type="button" class="btn btn-warning btn-circle"><i class="fa fa-pencil"></i></button>
-                                            <a href="<?php echo base_url()."index.php/Bayi/delete/".$b['idBalita']; ?>" style="text-decoration: none;" title="Hapus Data"><button type="button" class="btn btn-danger btn-circle"><i class="fa fa-times"></i></button>
+                                            <a href="<?php echo base_url()."/Bayi/detail/".$b['idBalita']; ?>" style="text-decoration: none;" title="Informasi Lengkap"><button type="button" class="btn btn-primary btn-circle"><i class="fa fa-list"></i></button>
+                                            <a href="<?php echo base_url()."/Bayi/edit/".$b['idBalita']; ?>" style="text-decoration: none;" title="Ubah Data"><button type="button" class="btn btn-warning btn-circle"><i class="fa fa-pencil"></i></button>
+                                            <a href="<?php echo base_url()."/Bayi/delete/".$b['idBalita']; ?>" style="text-decoration: none;" title="Hapus Data"><button type="button" class="btn btn-danger btn-circle"><i class="fa fa-times"></i></button>
                                         </td>
                                     </tr>
                                     <?php } ?>
