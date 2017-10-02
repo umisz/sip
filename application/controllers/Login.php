@@ -15,13 +15,16 @@ class Login extends CI_Controller {
 
   function aksi_login()
   {
-
+  		session_start();
 		$username = $this->input->post('username');
-		$password = $this->input->post('password');
+		$pass = $this->input->post('password');
+		$password = md5($pass);
+
 		$where = array(
 			'username' => $username,
 			'password' => $password
 			);
+		$_SESSION['username'] = $username;
 		$cek = $this->m_login->cek_login("kader_admin",$where)->num_rows();
 		if($cek > 0){
 
@@ -32,7 +35,7 @@ class Login extends CI_Controller {
 
 			$this->session->set_userdata($data_session);
 
-			redirect(base_url("Bayi"));
+			redirect("Bayi");
 
 		}else{
 			echo "Username dan password salah !";
