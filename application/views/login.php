@@ -8,7 +8,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="description" content="">
         <meta name="author" content="">
-        <title>Sistem Informasi Posyandu</title>
+        <title>SIP - Login</title>
         <link href="<?php echo base_url();?>/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
         <link href="<?php echo base_url();?>/assets/vendor/metisMenu/metisMenu.min.css" rel="stylesheet">
         <link href="<?php echo base_url();?>/assets/dist/css/sb-admin-2.css" rel="stylesheet">
