@@ -10,6 +10,7 @@ class Welcome extends CI_Controller {
     }
 
 	public function index() {
+		$data['err_message'] = "";
 		$this->load->view('login');	
 	}
 

@@ -10,13 +10,13 @@ class Login extends CI_Controller {
   function index()
   {
 
-		$this->load->view('login');
+		$data['err_message'] = "";
+		$this->load->view('login',$data);
   }
 
   function aksi_login()
   {
-  		session_start();
-		$username = $this->input->post('username');
+  		$username = $this->input->post('username');
 		$pass = $this->input->post('password');
 		$password = md5($pass);
 
@@ -24,21 +24,21 @@ class Login extends CI_Controller {
 			'username' => $username,
 			'password' => $password
 			);
-		$_SESSION['username'] = $username;
 		$cek = $this->m_login->cek_login("kader_admin",$where)->num_rows();
 		if($cek > 0){
-
+			session_start();
 			$data_session = array(
 				'nama' => $username,
 				'status' => "login"
 				);
-
+			$_SESSION['username'] = $username;
 			$this->session->set_userdata($data_session);
 
 			redirect("Bayi");
 
 		}else{
-			echo "Username dan password salah !";
+			$data['err_message'] = "Username dan password salah !";
+			$this->load->view('login',$data);
 		}
   }
 
