@@ -10,13 +10,13 @@
                 <div class="panel-body">
                     <div class="row">
                         <div class="col-lg-12">
-                            <form method ="POST" action="<?php echo base_url()."index.php/Bayi/processAdd/"?>">
+                            <form method ="POST" action="<?php echo base_url()."index.php/Bayi/processAdd/"?>" id="formBayi" onSubmit="return validasi()">
                                 <div class="col-lg-6">
                                     <h2>Informasi Pribadi</h2>
                                     <hr>
                                     <div class="form-group">
                                         <label>Nama Bayi</label>
-                                        <input class="form-control" type="text" name="namaBayi" id="input-field" onkeyup="validate();" required>
+                                        <input class="form-control" type="text" name="namaBayi" id="nama" required>
                                     </div>
                                     <div class="form-group">
                                         <label>Nama Ibu</label>
@@ -113,5 +113,13 @@
       var element = document.getElementById('input-field');
       element.value = element.value.replace(/[^a-zA-Z0-9-.' ]+/, '');
     };
+    function validasi(){
+        var nama=document.forms["formBayi"]["nama"].value;
+        var characters=/^[a-zA-Z' ]+$/;
+        if (!nama.match(characters)){
+            alert("Salah");
+            return false;
+        };
+    }
 </script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
