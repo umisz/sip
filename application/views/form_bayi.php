@@ -16,20 +16,20 @@
                                     <hr>
                                     <div class="form-group">
                                         <label>Nama Bayi</label>
-                                        <input class="form-control" type="text" name="namaBayi" required>
+                                        <input class="form-control" type="text" name="namaBayi" id="input-field" onkeyup="validate();" required>
                                     </div>
                                     <div class="form-group">
                                         <label>Nama Ibu</label>
-                                        <input class="form-control" type="text" name="namaIbu" required>
+                                        <input class="form-control" type="text" name="namaIbu" id="input-field" onkeyup="validate();" required>
                                     </div>
                                     <div class="form-group">
                                         <label>Nama Ayah</label>
-                                        <input class="form-control" type="text" name="namaAyah" required>
+                                        <input class="form-control" type="text" name="namaAyah" id="input-field" onkeyup="validate();" required>
                                     </div>
                                     <div class="col-lg-6">
                                         <div class="form-group">
                                             <label>Tempat Lahir</label>
-                                            <input class="form-control" type="text" name="tempatLahir" required>
+                                            <input class="form-control" type="text" name="tempatLahir" id="input-field" onkeyup="validate();" required>
                                         </div>
                                     </div>
                                     <div class="col-lg-6">
@@ -47,7 +47,7 @@
                                     <div class="col-lg-12">
                                         <div class="form-group">
                                             <label>Alamat</label>
-                                            <textarea class="form-control" rows="4" name="alamatOrtu" required></textarea>
+                                            <textarea class="form-control" rows="4" name="alamatOrtu" id="input-field" onkeyup="validateAlamat();" required></textarea>
                                         </div>
                                     </div>
                                 </div>
@@ -82,13 +82,13 @@
                                     <div class="col-lg-5">
                                         <div class="form-group">
                                             <label>Panjang Lahir</label>
-                                            <input class="form-control" type="text" name="panjangLahir" placeholder="dalam cm" required>
+                                            <input class="form-control" type="number" name="panjangLahir" placeholder="dalam cm" required>
                                         </div>
                                     </div>
                                     <div class="col-lg-5">
                                         <div class="form-group">
                                             <label>Berat Lahir</label>
-                                            <input class="form-control" type="text" name="beratLahir" placeholder="dalam cm" required>
+                                            <input class="form-control" type="number" name="beratLahir" placeholder="dalam cm" required>
                                         </div>
                                     </div>
                                 </div>
@@ -103,3 +103,15 @@
         </div>
     </div>
 </div>
+
+<script type="text/javascript">
+    function validate() {
+      var element = document.getElementById('input-field');
+      element.value = element.value.replace(/[^a-zA-Z' ]+/, '');
+    };
+    function validateAlamat() {
+      var element = document.getElementById('input-field');
+      element.value = element.value.replace(/[^a-zA-Z0-9-.' ]+/, '');
+    };
+</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
