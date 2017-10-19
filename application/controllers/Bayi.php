@@ -2,13 +2,6 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Bayi extends CI_Controller {
-	public $idBalita;	public $namaBayi;
-	public $namaIbu;	public $namaAyah;
-	public $tempatLahir;	public $tanggalLahir;
-	public $anakKe;		public $alamatOrtu;
-	public $jenisKelamin;	public $golonganDarah;
-	public $panjangLahir;	public $beratLahir;
-	public $panjangSekarang; 	public $beratSekarang;
 	public function __construct(){
         parent::__construct();
         if($this->session->userdata('status') != "login"){
@@ -83,9 +76,9 @@ class Bayi extends CI_Controller {
   		);
   		$res = $this->ModelPosyandu->addData('balita',$tambah_data);
 		if($res >=1){
-			echo "berhasil";
+			redirect ('Bayi');
 		}else{
-			echo "<h2>Galat</h2>";
+			redirect ('Bayi/add');
 		}
 	}
 	public function informasiBayi ($idBalita){
@@ -140,9 +133,9 @@ class Bayi extends CI_Controller {
 		$where = array('idBalita' => $idBalita );
 		$res = $this->ModelPosyandu->UpdateData('balita',$update_data,$where);
 		if($res >=1){
-			echo "Berhasil";
+			redirect('Bayi/detail/'.$idBalita);
 		}else{
-			echo "Gagal";
+			redirect('Bayi/edit/'.$idBalita);
 		}
 
 	}
@@ -152,7 +145,7 @@ class Bayi extends CI_Controller {
 		if($res >=1){
 			redirect('Bayi');
 		}else{
-			echo "<h2>Galat</h2>";
+			redirect('Bayi');
 		}
 	}
 }

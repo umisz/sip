@@ -16,42 +16,42 @@
                                     <hr>
                                     <div class="form-group">
                                         <label>ID Bayi</label>
-                                        <input class="form-control" type="text" name="idBalita" value="<?php echo $idBalita; ?>" readonly>
+                                        <input class="form-control" title="Nomor Daftar Bayi" type="text" name="idBalita" value="<?php echo $idBalita; ?>" readonly>
                                     </div>
                                     <div class="form-group">
                                         <label>Nama Bayi</label>
-                                        <input class="form-control" type="text" name="namaBayi" value="<?php echo $namaBayi; ?>" readonly>
+                                        <input class="form-control" title="Nama Bayi" type="text" name="namaBayi" value="<?php echo $namaBayi; ?>" readonly>
                                     </div>
                                     <div class="form-group">
                                         <label>Nama Ibu</label>
-                                        <input class="form-control" type="text" name="namaIbu" value="<?php echo $namaIbu; ?>" readonly>
+                                        <input class="form-control" title="Nama Ibu Bayi" type="text" name="namaIbu" value="<?php echo $namaIbu; ?>" readonly>
                                     </div>
                                     <div class="form-group">
                                         <label>Nama Ayah</label>
-                                        <input class="form-control" type="text" name="namaAyah" value="<?php echo $namaAyah; ?>" readonly>
+                                        <input class="form-control" type="text" title="Nama Ayah Ibu" name="namaAyah" value="<?php echo $namaAyah; ?>" readonly>
                                     </div>
                                     <div class="col-lg-6">
                                         <div class="form-group">
                                             <label>Tempat Lahir</label>
-                                            <input class="form-control" type="text" name="tempatLahir" value="<?php echo $tempatLahir; ?>" readonly>
+                                            <input class="form-control" type="text" title="Tempat Lahir" name="tempatLahir" value="<?php echo $tempatLahir; ?>" readonly>
                                         </div>
                                     </div>
                                     <div class="col-lg-6">
                                         <div class="form-group">
                                             <label>Tanggal Lahir</label>
-                                            <input class="form-control" type="date" name="tanggalLahir" value="<?php echo $tanggalLahir; ?>" readonly>
+                                            <input class="form-control" type="date"  title ="Tanggal Lahir" name="tanggalLahir" value="<?php echo $tanggalLahir; ?>" readonly>
                                         </div>
                                     </div>
                                     <div class="col-lg-4">
                                         <div class="form-group">
                                             <label>Anak Ke-</label>
-                                            <input class="form-control" type="number" name="anakKe" value="<?php echo $anakKe; ?>" readonly>
+                                            <input class="form-control" type="number" name="anakKe" title="Anak Ke-" value="<?php echo $anakKe; ?>" readonly>
                                         </div>
                                     </div>
                                     <div class="col-lg-12">
                                         <div class="form-group">
                                             <label>Alamat</label>
-                                            <textarea class="form-control" rows="4" name="alamatOrtu"><?php echo $alamatOrtu; ?></textarea>
+                                            <textarea class="form-control" rows="4" title="Alamat" name="alamatOrtu"><?php echo $alamatOrtu; ?></textarea>
                                         </div>
                                     </div>
                                 </div>
@@ -61,7 +61,7 @@
                                     <div class="col-lg-6">
                                          <div class="form-group">
                                             <label>Jenis Kelamin</label>
-                                            <input class="form-control" type="text" name="jenisKelamin" value="<?php echo $jenisKelamin; ?>" readonly>
+                                            <input class="form-control" type="text" title="Jenis Kelamin" name="jenisKelamin" value="<?php echo $jenisKelamin; ?>" readonly>
                                             </div>
                                         </div>
                                     </div>
@@ -80,13 +80,13 @@
                                     <div class="col-lg-5">
                                         <div class="form-group">
                                             <label>Panjang Lahir</label>
-                                            <input class="form-control" type="text" name="panjangLahir" placeholder="dalam cm" value="<?php echo $panjangLahir; ?>" readonly>
+                                            <input class="form-control" title="Panjang Lahir Bayi" type="text" name="panjangLahir" placeholder="dalam cm" value="<?php echo $panjangLahir; ?>" readonly>
                                         </div>
                                     </div>
                                     <div class="col-lg-5">
                                         <div class="form-group">
                                             <label>Berat Lahir</label>
-                                            <input class="form-control" type="text" name="beratLahir" placeholder="dalam cm" value ="<?php echo $beratLahir; ?>" readonly >
+                                            <input class="form-control" title="Berat Lahir Bayi" type="text" name="beratLahir" placeholder="dalam cm" value ="<?php echo $beratLahir; ?>" readonly >
                                         </div>
                                     </div>
                                     <br>
@@ -94,14 +94,14 @@
                                     <hr>
                                     <div class="col-lg-5">
                                         <div class="form-group">
-                                            <label>Panjang Lahir</label>
-                                            <input class="form-control" type="text" name="panjangSekarang" placeholder="dalam cm" value="" required>
+                                            <label>Panjang Sekarang</label>
+                                            <input class="form-control" title="Panjang Sekarang" type="number" name="panjangSekarang" placeholder="dalam cm" step="0.01" value="" required>
                                         </div>
                                     </div>
                                     <div class="col-lg-5">
                                         <div class="form-group">
-                                            <label>Berat Lahir</label>
-                                            <input class="form-control" type="text" name="beratSekarang" placeholder="dalam cm" value ="" required>
+                                            <label>Berat Sekarang</label>
+                                            <input class="form-control" type="number" title="Berat Sekarang" name="beratSekarang" placeholder="dalam kg" step="0.01" value ="" required>
                                         </div>
                                     </div>
                                 </div>
