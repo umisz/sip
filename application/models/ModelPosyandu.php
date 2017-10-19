@@ -5,8 +5,12 @@ class ModelPosyandu extends CI_Model {
         $this->load->database();
     }
     public function getData($tableName,$data,$where=""){
-			$data = $this -> db ->query('SELECT '.$data.' FROM '.$tableName." ".$where);
-			return $data -> result_array();
+		$data = $this -> db ->query('SELECT '.$data.' FROM '.$tableName." ".$where);
+		return $data -> result_array();
+	}
+	public function dataTerakhir(){
+		$data = $this->db->query("SELECT MAX(RIGHT(idBalita,3)) AS id FROM balita");
+		return $data;
 	}
     public function addData($tableName,$data){
 		$res = $this -> db -> insert($tableName,$data);

@@ -30,8 +30,19 @@ class Bayi extends CI_Controller {
 		$this->load->view('form_bayi');
 	}
 	public function processAdd(){
-		$bayi = $this->ModelPosyandu->getData('balita','max(idBalita) AS last');
+		$data = $this->ModelPosyandu->dataTerakhir();
+		$bayi = $this->ModelPosyandu->getData('balita','MAX(RIGHT(idBalita,3)) AS last');
 		$lastId = array('last'=>$bayi[0]['last']);
+		$last = implode("", $lastId);
+		$kode = "";
+		if($data->num_rows()>0){
+			$baru = $last+1;
+			$kode = str_pad($baru, 4, "0", STR_PAD_LEFT);
+		}else{
+			$baru = 1;
+			$kode = str_pad($baru, 4, "0", STR_PAD_LEFT);
+		}
+		$idBalita = 'BAYI'.$kode;
 		$namaBayi = $_POST['namaBayi'];
 		$namaIbu = $_POST['namaIbu'];
 		$namaAyah = $_POST['namaAyah'];
@@ -43,7 +54,6 @@ class Bayi extends CI_Controller {
 		$golonganDarah = $_POST['golonganDarah'];
 		$panjangLahir = $_POST['panjangLahir'];
 		$beratLahir = $_POST['beratLahir'];
-		$idBalita = $jenisKelamin.implode("", $lastId) + 001;
 
 		$now =  date("Y-m-d");
 		$datetime1 = new DateTime($tanggalLahir);
@@ -79,7 +89,7 @@ class Bayi extends CI_Controller {
 		}
 	}
 	public function informasiBayi ($idBalita){
-		$data = $this->ModelPosyandu->getData('balita','*','where idBalita= '.$idBalita);
+		$data = $this->ModelPosyandu->getData('balita','*','where idBalita = "'.$idBalita.'"');
 		$jkArr = array('jenisKelamin'=>$data[0]['jenisKelamin']);
 		$golArr = array('golonganDarah'=>$data[0]['golonganDarah']);
 		$kodeJenis = implode("", $jkArr);
