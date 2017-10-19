@@ -2,14 +2,6 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Ibu_hamil extends CI_Controller {
-	public $idIbu;
-	public $namaBumil;			public $namaSuami;
-	public $alamatBumil;		public $umur;
-	public $usiaKandungan;		public $kandunganKe;
-	public $tempatLahir;		public $tanggalLahir;
-	public $hpht;				public $perkiraanLahir;
-	public $tinggiIbu;			public $beratAwal;
-	public $beratUpdate;
 	public function __construct() {
         parent::__construct();
         if($this->session->userdata('status') != "login"){
@@ -81,9 +73,9 @@ class Ibu_hamil extends CI_Controller {
 		);
 		$res = $this->ModelPosyandu->addData('ibuhamil',$tambah_data);
 		if($res >=1){
-			echo "berhasil";
+			redirect('Ibu_hamil');
 		}else{
-			echo "<h2>Galat</h2>";
+			redirect('Ibu_hamil/add');
 		}
 	}
 	public function doUpdate(){
@@ -98,22 +90,8 @@ class Ibu_hamil extends CI_Controller {
 		$where = array('idIbu' => $idIbu );
 		$res = $this->ModelPosyandu->UpdateData('ibuhamil',$update_data,$where);
 		if($res >=1){
-			/*
-			$this->session->set_flashdata('msg', 
-            	'<div class="alert alert-info alert-dismissible" role="alert">
-            		<i class="fa fa-info-circle"></i>
-            			Data '.$idIbu.' telah berhasil diupdate 
-                </div>');
-            */ 
-			redirect('Ibu_hamil/index');
+			redirect('Ibu_hamil/detail'.$idIbu);
 		}else{
-			/*
-			$this->session->set_flashdata('msg', 
-                '<div class="alert alert-danger alert-dismissible" role="alert">
-                	<i class="fa fa-times-circle"></i>
-	                    Data '.$idIbu.' gagal diupdate
-                </div>');
-            */ 
 			redirect('Ibu_hamil/edit/'.$idIbu);
 		}
 	}
@@ -149,7 +127,7 @@ class Ibu_hamil extends CI_Controller {
 		if($res >=1){
 			redirect('Ibu_hamil');
 		}else{
-			echo "<h2>Galat</h2>";
+			redirect('Ibu_hamil');
 		}
 	}
 }
