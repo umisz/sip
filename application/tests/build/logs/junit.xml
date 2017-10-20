@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite name="CodeIgniter Application Test Suite" tests="3" assertions="3" failures="0" errors="0" time="0.186685">
+    <testsuite name="Login_test" file="C:\xampp\htdocs\posyandu\application\tests\controllers\Login_test.php" fullPackage="Login" tests="3" assertions="3" failures="0" errors="0" time="0.186685">
+      <testcase name="test_login" class="Login_test" file="C:\xampp\htdocs\posyandu\application\tests\controllers\Login_test.php" line="12" assertions="1" time="0.087222"/>
+      <testcase name="test_login_error" class="Login_test" file="C:\xampp\htdocs\posyandu\application\tests\controllers\Login_test.php" line="17" assertions="1" time="0.051265"/>
+      <testcase name="test_index" class="Login_test" file="C:\xampp\htdocs\posyandu\application\tests\controllers\Login_test.php" line="22" assertions="1" time="0.048198"/>
+    </testsuite>
+  </testsuite>
+</testsuites>
