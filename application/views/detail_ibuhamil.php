@@ -51,19 +51,23 @@
                                 <table style="margin: 20px 0 10px 25px; height: 10%">
                                     <tr style="margin-bottom: 10px;">
                                         <td>Kehamilan Ke </td>
-                                        <td style="margin: 0 0 0 5px;"><?php echo $kandunganKe; ?></td>
+                                        <td> : </td>
+                                        <td> <?php echo $kandunganKe; ?></td>
                                     </tr>
                                     <tr style="margin-bottom: 10px;">
                                         <td>Minggu Ke </td>
-                                        <td style="margin: 0 0 0 5px;"><?php echo $usiaKandungan; ?></td>
+                                        <td> : </td>
+                                        <td> <?php echo $usiaKandungan; ?></td>
                                     </tr>
                                     <tr style="margin-bottom: 10px;">
-                                        <td>Hari Pertama Haid Terakhir (HPHT)</td>
-                                        <td><?php echo $hpht; ?></td>
+                                        <td>Hari Pertama Haid Terakhir (HPHT) </td>
+                                        <td> : </td>
+                                        <td> <?php echo $hpht; ?></td>
                                     </tr>
                                     <tr style="margin-bottom: 10px;">
-                                        <td>Hari Perkiraan Persalinan</td>
-                                        <td><?php echo $perkiraanLahir; ?></td>
+                                        <td>Hari Perkiraan Persalinan </td>
+                                        <td> : </td>
+                                        <td> <?php echo $perkiraanLahir; ?></td>
                                     </tr>
                                 </table>
                             
