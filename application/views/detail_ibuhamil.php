@@ -3,48 +3,51 @@
         <div class="row">
             <div class="col-lg-12">
                 <h1 class="page-header">Detail Ibu Hamil</h1>
-                    <div class="panel panel-default"> 
-                        <div class="panel-body">
-                            <h2>Informasi Dasar</h2>
-                            <div class="row">
-                                <div class="col-lg-12">
-                                    <div class="col-lg-4">
-                                        <h4><strong>Nomor Identitas</strong></h4>
-                                        <p><?php echo $idIbu; ?></p>
-                                    </div>
-                                    <div class="col-lg-4">
-                                        <h4><strong>Nama Ibu Hamil</strong></h4>
-                                        <p><?php echo $namaBumil; ?></p>
-                                    </div>
-                                    <div class="col-lg-4">
-                                        <h4><strong>Nama Suami</strong></h4>
-                                        <p><?php echo $namaSuami; ?></p>
-                                    </div>
-                                </div>
-                                <div class="col-lg-12">
-                                    <div class="col-lg-4">
-                                        <h4><strong>Tempat Lahir</strong></h4>
-                                        <p><?php echo $tempatLahir; ?></p>
-                                    </div>
-                                    <div class="col-lg-4">
-                                        <h4><strong>Tanggal Lahir</strong></h4>
-                                        <p><?php echo $tanggalLahir; ?></p>
-                                    </div>
-                                    <div class="col-lg-4">
-                                        <h4><strong>Umur</strong></h4>
-                                        <p><?php echo $umur; ?></p>
-                                    </div>
-                                </div>
-                                <div class="col-lg-12">
-                                    <div class="col-lg-6">
-                                        <h4><strong>Alamat</strong></h4>
-                                        <p><?php echo $alamatBumil; ?></p>
-                                    </div>
-                                </div>
+                <div class="row">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <strong>Informasi Dasar</strong>
+                        </div>
+                        <div class="panel-body"> 
+                            <div class="col-lg-4">
+                                <h4><strong>Nomor Identitas</strong></h4>
+                                <p><?php echo $idIbu; ?></p>
                             </div>
-                        <h2>Informasi Kehamilan</h2>
-                        <div class="row">
+                            <div class="col-lg-4">
+                                <h4><strong>Nama Ibu Hamil</strong></h4>
+                                <p><?php echo $namaBumil; ?></p>
+                            </div>
+                            <div class="col-lg-4">
+                                <h4><strong>Nama Suami</strong></h4>
+                                <p><?php echo $namaSuami; ?></p>
+                            </div>
+                        
+                        
+                            <div class="col-lg-4">
+                                <h4><strong>Tempat Lahir</strong></h4>
+                                <p><?php echo $tempatLahir; ?></p>
+                            </div>
+                            <div class="col-lg-4">
+                                <h4><strong>Tanggal Lahir</strong></h4>
+                                <p><?php echo $tanggalLahir; ?></p>
+                            </div>
+                            <div class="col-lg-4">
+                                <h4><strong>Umur</strong></h4>
+                                <p><?php echo $umur; ?></p>
+                            </div>
+                        
                             <div class="col-lg-6">
+                                <h4><strong>Alamat</strong></h4>
+                                <p><?php echo $alamatBumil; ?></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <strong>Informasi Kehamilan</strong>
+                        </div>
+                        <div class="panel-body">
+                            
                                 <table style="margin: 20px 0 10px 25px; height: 10%">
                                     <tr style="margin-bottom: 10px;">
                                         <td>Kehamilan Ke </td>
@@ -63,7 +66,7 @@
                                         <td><?php echo $perkiraanLahir; ?></td>
                                     </tr>
                                 </table>
-                            </div>
+                            
                             <div class="col-lg-10">
                                 <div class="col-lg-4">
                                     <h4><strong>Tinggi Badan : </strong></h4>
@@ -84,22 +87,18 @@
                                 <p><?php echo $status; ?></p>
                             </div>
                         </div>
-                        <br><br>
-                        <p style="text-align: right;">
-                            <a href="<?php echo base_url()."index.php/Ibu_hamil"; ?>"><button type="button" class="btn btn-primary">Kembali</button>
-                            <a href="<?php echo base_url()."index.php/Ibu_hamil/edit/".$idIbu; ?>"><button type="button" class="btn btn-warning">Edit</button>
-                            <a href="<?php echo base_url()."index.php/Ibu_hamil/delete/".$idIbu; ?>"><button type="button" class="btn btn-danger">Hapus</button>
-                        </p>
                     </div>
                 </div>
+                <p style="text-align: right;">
+                    <a href="<?php echo base_url()."index.php/Ibu_hamil"; ?>"><button type="button" class="btn btn-primary">Kembali</button>
+                    <a href="<?php echo base_url()."index.php/Ibu_hamil/edit/".$idIbu; ?>"><button type="button" class="btn btn-warning">Edit</button>
+                    <a href="<?php echo base_url()."index.php/Ibu_hamil/delete/".$idIbu; ?>"><button type="button" class="btn btn-danger">Hapus</button>
+                </p>
             </div>
-                    <!-- /.col-lg-12 -->
         </div>
-                <!-- /.row -->
     </div>
-            <!-- /.container-fluid -->
 </div>
-        <!-- /#page-wrapper -->
+
 </div>
     <!-- /#wrapper -->
 
