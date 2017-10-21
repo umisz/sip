@@ -1,16 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuites>
-  <testsuite name="CodeIgniter Application Test Suite" tests="7" assertions="7" failures="0" errors="0" time="0.768058">
-    <testsuite name="Bayi_test" file="C:\xampp\htdocs\posyandu\application\tests\controllers\Bayi_test.php" fullPackage="Bayi" tests="4" assertions="4" failures="0" errors="0" time="0.622841">
-      <testcase name="test_index_bayi" class="Bayi_test" file="C:\xampp\htdocs\posyandu\application\tests\controllers\Bayi_test.php" line="13" assertions="1" time="0.315031"/>
-      <testcase name="test_detail_bayi" class="Bayi_test" file="C:\xampp\htdocs\posyandu\application\tests\controllers\Bayi_test.php" line="20" assertions="1" time="0.118430"/>
-      <testcase name="test_delete_bayi" class="Bayi_test" file="C:\xampp\htdocs\posyandu\application\tests\controllers\Bayi_test.php" line="27" assertions="1" time="0.054378"/>
-      <testcase name="test_edit_bayi" class="Bayi_test" file="C:\xampp\htdocs\posyandu\application\tests\controllers\Bayi_test.php" line="34" assertions="1" time="0.135002"/>
+  <testsuite name="CodeIgniter Application Test Suite" tests="10" assertions="10" failures="0" errors="0" time="1.610153">
+    <testsuite name="Bayi_test" file="C:\xampp\htdocs\posyandu\application\tests\controllers\Bayi_test.php" fullPackage="Bayi" tests="7" assertions="7" failures="0" errors="0" time="1.373220">
+      <testcase name="test_index_bayi" class="Bayi_test" file="C:\xampp\htdocs\posyandu\application\tests\controllers\Bayi_test.php" line="13" assertions="1" time="0.189142"/>
+      <testcase name="test_detail_bayi" class="Bayi_test" file="C:\xampp\htdocs\posyandu\application\tests\controllers\Bayi_test.php" line="20" assertions="1" time="0.105784"/>
+      <testcase name="test_delete_bayi" class="Bayi_test" file="C:\xampp\htdocs\posyandu\application\tests\controllers\Bayi_test.php" line="27" assertions="1" time="0.070919"/>
+      <testcase name="test_edit_bayi" class="Bayi_test" file="C:\xampp\htdocs\posyandu\application\tests\controllers\Bayi_test.php" line="34" assertions="1" time="0.083192"/>
+      <testcase name="test_add" class="Bayi_test" file="C:\xampp\htdocs\posyandu\application\tests\controllers\Bayi_test.php" line="41" assertions="1" time="0.048767"/>
+      <testcase name="test_processAdd" class="Bayi_test" file="C:\xampp\htdocs\posyandu\application\tests\controllers\Bayi_test.php" line="48" assertions="1" time="0.813979"/>
+      <testcase name="test_doUpdate" class="Bayi_test" file="C:\xampp\htdocs\posyandu\application\tests\controllers\Bayi_test.php" line="66" assertions="1" time="0.061437"/>
     </testsuite>
-    <testsuite name="Login_test" file="C:\xampp\htdocs\posyandu\application\tests\controllers\Login_test.php" fullPackage="Login" tests="3" assertions="3" failures="0" errors="0" time="0.145217">
-      <testcase name="test_login" class="Login_test" file="C:\xampp\htdocs\posyandu\application\tests\controllers\Login_test.php" line="12" assertions="1" time="0.069056"/>
-      <testcase name="test_login_error" class="Login_test" file="C:\xampp\htdocs\posyandu\application\tests\controllers\Login_test.php" line="17" assertions="1" time="0.041535"/>
-      <testcase name="test_index" class="Login_test" file="C:\xampp\htdocs\posyandu\application\tests\controllers\Login_test.php" line="22" assertions="1" time="0.034626"/>
+    <testsuite name="Login_test" file="C:\xampp\htdocs\posyandu\application\tests\controllers\Login_test.php" fullPackage="Login" tests="3" assertions="3" failures="0" errors="0" time="0.236933">
+      <testcase name="test_login" class="Login_test" file="C:\xampp\htdocs\posyandu\application\tests\controllers\Login_test.php" line="12" assertions="1" time="0.117456"/>
+      <testcase name="test_login_error" class="Login_test" file="C:\xampp\htdocs\posyandu\application\tests\controllers\Login_test.php" line="17" assertions="1" time="0.071059"/>
+      <testcase name="test_index" class="Login_test" file="C:\xampp\htdocs\posyandu\application\tests\controllers\Login_test.php" line="22" assertions="1" time="0.048418"/>
     </testsuite>
   </testsuite>
 </testsuites>

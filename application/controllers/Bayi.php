@@ -22,6 +22,7 @@ class Bayi extends CI_Controller {
 		$this->load->view('sidebar');
 		$this->load->view('form_bayi');
 	}
+        
 	public function processAdd(){
 		$data = $this->ModelPosyandu->dataTerakhir();
 		$bayi = $this->ModelPosyandu->getData('balita','MAX(RIGHT(idBalita,3)) AS last');
@@ -125,12 +126,17 @@ class Bayi extends CI_Controller {
         
 	public function doUpdate(){
 		$idBalita = $_POST['idBalita'];
-		$alamatOrtu = $_POST['alamatOrtu'];				$golonganDarah = $_POST['golonganDarah'];
-		$panjangSekarang = $_POST['panjangSekarang'];	$beratSekarang = $_POST['beratSekarang'];
+		$alamatOrtu = $_POST['alamatOrtu'];
+                $golonganDarah = $_POST['golonganDarah'];
+                $panjangSekarang = $_POST['panjangSekarang'];
+                $beratSekarang = $_POST['beratSekarang'];
 		$update_data = array(
-			'alamatOrtu'=>$alamatOrtu,	'golonganDarah'=>$golonganDarah,
-			'panjangSekarang'=>$panjangSekarang, 'beratSekarang'=>$beratSekarang
+                    'alamatOrtu'=>$alamatOrtu,
+                    'golonganDarah'=>$golonganDarah,
+                    'panjangSekarang'=>$panjangSekarang,
+                    'beratSekarang'=>$beratSekarang
 		);
+                
 		$where = array('idBalita' => $idBalita );
 		$res = $this->ModelPosyandu->UpdateData('balita',$update_data,$where);
 		if($res >=1){

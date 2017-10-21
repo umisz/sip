@@ -37,7 +37,45 @@ class Bayi_test extends TestCase
             $output = $this->request('POST', 'Bayi/edit',['IDBAYI' => 'BAYI0001']);
             $this->assertContains('<title>Sistem Informasi Posyandu</title>', $output);
         }
-}
+        
+        public function test_add() {
+            $_SESSION['username'] = "titis";
+            $_SESSION['status'] = "login";
+            $output = $this->request('GET', 'Bayi/add');
+            $this->assertContains('<title>Sistem Informasi Posyandu</title>', $output);
+        }
+        
+        public function test_processAdd() {
+            $_SESSION['username'] = "titis";
+            $_SESSION['status'] = "login";
+            $output = $this->request('POST', 'Bayi/processAdd',
+                        ['namaBayi' => 'Bayi',
+                        'namaIbu' => "Ibu",
+                        'namaAyah' => 'Ayah',
+                        'tempatLahir' => "Tempat",
+                        'tanggalLahir' => '12/12/2012',
+                        'anakKe' => '1',
+                        'alamatOrtu' => 'alamat',
+                        'jenisKelamin' => 0,
+                        'golonganDarah' => "A",
+                        'panjangLahir' => '10',
+                        'beratLahir' => '10']);
+            $this->assertRedirect('Bayi', $output);
+        }
+        
+        public function test_doUpdate() {
+            $_SESSION['username'] = "titis";
+            $_SESSION['status'] = "login";
+            $output = $this->request('POST', 'Bayi/doUpdate',
+                        ['idBalita' => 'Bayi',
+                        'alamatOrtu' => 'alamat',
+                        'golonganDarah' => "A",
+                        'panjangSekarang' => '10',
+                        'beratSekarang' => '10']);
+            $this->assertRedirect('Bayi/detail/Bayi', $output);
+        }
+        
+    }
         
         
 ?>
