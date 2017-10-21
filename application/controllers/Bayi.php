@@ -122,6 +122,7 @@ class Bayi extends CI_Controller {
 		$this->load->view('sidebar');
 		$this->load->view('edit_bayi',$data);
 	}
+        
 	public function doUpdate(){
 		$idBalita = $_POST['idBalita'];
 		$alamatOrtu = $_POST['alamatOrtu'];				$golonganDarah = $_POST['golonganDarah'];

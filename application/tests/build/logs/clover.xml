@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1508506564">
-  <project timestamp="1508506564">
+<coverage generated="1508577251">
+  <project timestamp="1508577251">
     <file name="C:\xampp\htdocs\posyandu\application/controllers/Bayi.php">
       <class name="Bayi" namespace="global">
         <metrics methods="9" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="139" coveredstatements="0" elements="148" coveredelements="0"/>
@@ -280,7 +280,7 @@
     </file>
     <file name="C:\xampp\htdocs\posyandu\application/controllers/Login.php">
       <class name="Login" namespace="global">
-        <metrics methods="3" coveredmethods="3" conditionals="0" coveredconditionals="0" statements="22" coveredstatements="22" elements="25" coveredelements="25"/>
+        <metrics methods="3" coveredmethods="3" conditionals="0" coveredconditionals="0" statements="23" coveredstatements="22" elements="26" coveredelements="25"/>
       </class>
       <line num="3" type="method" name="__construct" crap="1" count="3"/>
       <line num="6" type="stmt" count="3"/>
@@ -290,25 +290,27 @@
       <line num="13" type="stmt" count="1"/>
       <line num="14" type="stmt" count="1"/>
       <line num="15" type="stmt" count="1"/>
-      <line num="17" type="method" name="aksi_login" crap="2" count="2"/>
+      <line num="17" type="method" name="aksi_login" crap="2.00" count="2"/>
       <line num="19" type="stmt" count="2"/>
       <line num="20" type="stmt" count="2"/>
       <line num="21" type="stmt" count="2"/>
       <line num="24" type="stmt" count="2"/>
-      <line num="25" type="stmt" count="2"/>
+      <line num="26" type="stmt" count="2"/>
       <line num="27" type="stmt" count="2"/>
       <line num="28" type="stmt" count="2"/>
       <line num="29" type="stmt" count="1"/>
       <line num="31" type="stmt" count="1"/>
-      <line num="32" type="stmt" count="1"/>
+      <line num="33" type="stmt" count="1"/>
       <line num="34" type="stmt" count="1"/>
       <line num="35" type="stmt" count="1"/>
       <line num="37" type="stmt" count="1"/>
+      <line num="39" type="stmt" count="0"/>
       <line num="40" type="stmt" count="1"/>
       <line num="41" type="stmt" count="1"/>
       <line num="43" type="stmt" count="1"/>
       <line num="47" type="stmt" count="1"/>
-      <metrics loc="46" ncloc="46" classes="1" methods="3" coveredmethods="3" conditionals="0" coveredconditionals="0" statements="22" coveredstatements="22" elements="25" coveredelements="25"/>
+      <line num="79" type="stmt" count="1"/>
+      <metrics loc="46" ncloc="46" classes="1" methods="3" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="23" coveredstatements="22" elements="26" coveredelements="24"/>
     </file>
     <file name="C:\xampp\htdocs\posyandu\application/controllers/Logout.php">
       <class name="Logout" namespace="global">
@@ -1395,6 +1397,6 @@
       <line num="89" type="stmt" count="0"/>
       <metrics loc="88" ncloc="88" classes="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="69" coveredstatements="0" elements="69" coveredelements="0"/>
     </file>
-    <metrics files="30" loc="1665" ncloc="1663" classes="7" methods="32" coveredmethods="4" conditionals="0" coveredconditionals="0" statements="1260" coveredstatements="23" elements="1292" coveredelements="27"/>
+    <metrics files="30" loc="1665" ncloc="1663" classes="7" methods="32" coveredmethods="3" conditionals="0" coveredconditionals="0" statements="1261" coveredstatements="23" elements="1293" coveredelements="26"/>
   </project>
 </coverage>

@@ -1,10 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuites>
-  <testsuite name="CodeIgniter Application Test Suite" tests="3" assertions="3" failures="0" errors="0" time="0.186685">
-    <testsuite name="Login_test" file="C:\xampp\htdocs\posyandu\application\tests\controllers\Login_test.php" fullPackage="Login" tests="3" assertions="3" failures="0" errors="0" time="0.186685">
-      <testcase name="test_login" class="Login_test" file="C:\xampp\htdocs\posyandu\application\tests\controllers\Login_test.php" line="12" assertions="1" time="0.087222"/>
-      <testcase name="test_login_error" class="Login_test" file="C:\xampp\htdocs\posyandu\application\tests\controllers\Login_test.php" line="17" assertions="1" time="0.051265"/>
-      <testcase name="test_index" class="Login_test" file="C:\xampp\htdocs\posyandu\application\tests\controllers\Login_test.php" line="22" assertions="1" time="0.048198"/>
+  <testsuite name="CodeIgniter Application Test Suite" tests="7" assertions="7" failures="0" errors="0" time="0.768058">
+    <testsuite name="Bayi_test" file="C:\xampp\htdocs\posyandu\application\tests\controllers\Bayi_test.php" fullPackage="Bayi" tests="4" assertions="4" failures="0" errors="0" time="0.622841">
+      <testcase name="test_index_bayi" class="Bayi_test" file="C:\xampp\htdocs\posyandu\application\tests\controllers\Bayi_test.php" line="13" assertions="1" time="0.315031"/>
+      <testcase name="test_detail_bayi" class="Bayi_test" file="C:\xampp\htdocs\posyandu\application\tests\controllers\Bayi_test.php" line="20" assertions="1" time="0.118430"/>
+      <testcase name="test_delete_bayi" class="Bayi_test" file="C:\xampp\htdocs\posyandu\application\tests\controllers\Bayi_test.php" line="27" assertions="1" time="0.054378"/>
+      <testcase name="test_edit_bayi" class="Bayi_test" file="C:\xampp\htdocs\posyandu\application\tests\controllers\Bayi_test.php" line="34" assertions="1" time="0.135002"/>
+    </testsuite>
+    <testsuite name="Login_test" file="C:\xampp\htdocs\posyandu\application\tests\controllers\Login_test.php" fullPackage="Login" tests="3" assertions="3" failures="0" errors="0" time="0.145217">
+      <testcase name="test_login" class="Login_test" file="C:\xampp\htdocs\posyandu\application\tests\controllers\Login_test.php" line="12" assertions="1" time="0.069056"/>
+      <testcase name="test_login_error" class="Login_test" file="C:\xampp\htdocs\posyandu\application\tests\controllers\Login_test.php" line="17" assertions="1" time="0.041535"/>
+      <testcase name="test_index" class="Login_test" file="C:\xampp\htdocs\posyandu\application\tests\controllers\Login_test.php" line="22" assertions="1" time="0.034626"/>
     </testsuite>
   </testsuite>
 </testsuites>
