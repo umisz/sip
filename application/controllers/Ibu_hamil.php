@@ -5,8 +5,7 @@ class Ibu_hamil extends CI_Controller {
 	public function __construct() {
         parent::__construct();
         if($this->session->userdata('status') != "login"){
-			redirect(base_url("Welcome"));
-		}
+			redirect(base_url("Welcome"));}
         $this->load->model('ModelPosyandu');
     }
     public function hitungBBIdeal($idIbu){

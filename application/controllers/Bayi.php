@@ -5,8 +5,7 @@ class Bayi extends CI_Controller {
 	public function __construct(){
         parent::__construct();
         if($this->session->userdata('status') != "login"){
-			redirect(base_url("Welcome"));
-		}
+			redirect(base_url("Welcome"));}
         $this->load->model('ModelPosyandu');
     }
 
@@ -79,8 +78,7 @@ class Bayi extends CI_Controller {
 		if($res >=1){
 			redirect ('Bayi');
 		}else{
-			redirect ('Bayi/add');
-		}
+			redirect ('Bayi/add');}
 	}
 	public function informasiBayi ($idBalita){
 		$data = $this->ModelPosyandu->getData('balita','*','where idBalita = "'.$idBalita.'"');
