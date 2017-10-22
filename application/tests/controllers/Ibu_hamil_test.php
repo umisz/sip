@@ -15,6 +15,12 @@ class Ibu_hamil_test extends TestCase {
         $output = $this->request('GET', 'Ibu_hamil');
         $this->assertContains('<title>Sistem Informasi Posyandu</title>', $output);
     }
+    public function test_index_Ibu_hamil_gagal() {
+        $_SESSION['username'] = "titis";
+        $_SESSION['status'] = "kosong";
+        $output = $this->request('GET', 'Ibu_hamil');
+        $this->assertRedirect(base_url('Welcome'), $output);
+    }
 
     public function test_add() {
         $_SESSION['username'] = "titis";
