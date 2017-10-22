@@ -8,6 +8,12 @@ class ModelPosyandu extends CI_Model {
 		$data = $this -> db ->query('SELECT '.$data.' FROM '.$tableName." ".$where);
 		return $data -> result_array();
 	}
+
+	public function cekId($tableName,$where=""){
+		$data = $this -> db ->query('SELECT * FROM '.$tableName." ".$where);
+  		return $data->num_rows();
+ 
+	}
 	public function dataTerakhir(){
 		$data = $this->db->query("SELECT MAX(RIGHT(idBalita,3)) AS id FROM balita");
 		return $data;
