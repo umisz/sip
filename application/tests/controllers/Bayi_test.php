@@ -115,7 +115,7 @@ class Bayi_test extends TestCase {
     public function test_detail_bayi_golDarBelumTahu() {
         $_SESSION['username'] = "titis";
         $_SESSION['status'] = "login";
-        $output = $this->request('POST', 'Bayi/detail/BAYI0005', ['IDBAYI' => 'BAYI0005']);
+        $output = $this->request('POST', 'Bayi/detail/BAYI0016', ['IDBAYI' => 'BAYI0016']);
         $this->assertContains('<h1 class="page-header">Detail Bayi</h1>', $output);
     }
 

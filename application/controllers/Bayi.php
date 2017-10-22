@@ -71,7 +71,7 @@ class Bayi extends CI_Controller {
         if ($idBalita == NULL) {
             redirect('Bayi/add');
         } else {
-            $tambah_data = array(
+                $tambah_data = array(
                 'idBalita' => $idBalita, 'namaBayi' => $namaBayi,
                 'namaIbu' => $namaIbu, 'namaAyah' => $namaAyah,
                 'tempatLahir' => $tempatLahir, 'tanggalLahir' => $tanggalLahir,
