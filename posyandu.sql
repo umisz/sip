@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: 20 Okt 2017 pada 11.13
+-- Generation Time: 22 Okt 2017 pada 16.37
 -- Versi Server: 10.1.21-MariaDB
 -- PHP Version: 7.1.1
 
@@ -49,8 +49,9 @@ CREATE TABLE `balita` (
 --
 
 INSERT INTO `balita` (`idBalita`, `namaBayi`, `tempatLahir`, `tanggalLahir`, `namaAyah`, `namaIbu`, `alamatOrtu`, `anakKe`, `jenisKelamin`, `usiaBayi`, `beratLahir`, `panjangLahir`, `golonganDarah`, `beratSekarang`, `panjangSekarang`) VALUES
-('BAYI0001', 'Khorin Nisa\'', 'Surabaya', '2017-10-19', 'Nama Ayah', 'Nama Ibu', 'Surabaya', 2, 0, 0, '3.00', '12.00', 'A', '4.50', '13.50'),
-('BAYI0003', 'Nama Saya', 'Jakarta', '2017-10-25', 'Nama Ayah', 'Nama Ibu', 'Ada kok alamatnya', 4, 1, 1, '3.40', '12.30', 'BT', '3.40', '12.30');
+('BAYI0001', 'Titis Adi Mei Laningrum', 'Surabaya', '2017-10-01', 'Ayah Titis', 'Ibu Titis', 'alamat', 3, 1, 12, '3.00', '10.00', 'A', '10.00', '10.00'),
+('BAYI0002', 'Bruno Mars', 'Surabaya', '2017-10-01', 'Mars', 'Venus', 'alamat', 1, 0, 9, '3.60', '14.00', 'BT', '10.00', '10.00'),
+('BAYI0003', 'Imam Teguh', 'Surabaya', '2017-10-01', 'Ayah Imam', 'Ibu Imam', 'Surabaya', 1, 0, 10, '3.50', '12.00', 'BT', '4.50', '16.00');
 
 -- --------------------------------------------------------
 
@@ -68,11 +69,11 @@ CREATE TABLE `ibuhamil` (
   `kandunganKe` int(11) NOT NULL,
   `tempatLahir` varchar(50) NOT NULL,
   `tanggalLahir` date NOT NULL,
-  `beratUpdate` int(11) NOT NULL,
-  `beratAwal` int(11) NOT NULL,
+  `beratUpdate` decimal(11,2) NOT NULL,
+  `beratAwal` decimal(11,2) NOT NULL,
   `hpht` date NOT NULL,
   `perkiraanLahir` date NOT NULL,
-  `tinggiIbu` int(11) NOT NULL
+  `tinggiIbu` decimal(11,2) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -80,8 +81,14 @@ CREATE TABLE `ibuhamil` (
 --
 
 INSERT INTO `ibuhamil` (`idIbu`, `namaBumil`, `namaSuami`, `alamatBumil`, `umur`, `usiaKandungan`, `kandunganKe`, `tempatLahir`, `tanggalLahir`, `beratUpdate`, `beratAwal`, `hpht`, `perkiraanLahir`, `tinggiIbu`) VALUES
-('192827363687', 'Nama Saya', 'Nama Suami', 'Surabaya', 1, 6, 2, 'Surabaya', '2017-10-24', 54, 54, '2017-10-11', '2018-07-18', 151),
-('27326913912732', 'Ibu Hamil', 'Suami', 'Alamat', 16, 12, 8, 'Tempat Lahir', '2002-01-01', 59, 59, '2017-09-01', '2018-06-08', 168);
+('192827363687', 'Nama Saya', 'Nama Suami', 'Surabaya', 1, 8, 2, 'Surabaya', '2017-10-24', '67.00', '54.00', '2017-10-11', '2018-07-18', '160.00'),
+('27326913912732', 'Ibu Hamil', 'Suami', 'Alamat', 16, 12, 8, 'Tempat Lahir', '2002-01-01', '59.00', '59.00', '2017-09-01', '2018-06-08', '168.00'),
+('3171015408850001', 'Sasha', 'Suami Sasha', 'Surabaya', 33, 7, 1, 'Tempat', '1985-08-17', '57.45', '50.00', '0000-00-00', '2018-07-08', '165.00'),
+('3171015408850002', 'Sasha', 'Suami Sasha', 'Surabaya', 33, 6, 1, 'Tempat', '1985-08-17', '54.00', '50.00', '0000-00-00', '2018-07-08', '165.00'),
+('3171015408850004', 'Sasha', 'Suami Sasha', 'Surabaya', 33, 5, 1, 'Tempat', '1985-08-17', '54.00', '50.00', '0000-00-00', '2018-07-08', '148.00'),
+('3171015408850005', 'Sasha', 'Suami Sasha', 'Surabaya', 33, 4, 1, 'Tempat', '1985-08-17', '50.00', '50.00', '0000-00-00', '2018-07-08', '160.00'),
+('3171015408850008', 'Sasha Middle', 'Suami Sasha Middle', 'Surabaya', 33, 4, 2, 'California', '1985-08-17', '50.00', '50.00', '0000-00-00', '2018-07-08', '155.00'),
+('3171015408850009', 'Sasha Middle', 'Suami Sasha Middle', 'Surabaya', 33, 4, 2, 'California', '1985-08-17', '50.00', '50.00', '0000-00-00', '2018-07-08', '155.00');
 
 -- --------------------------------------------------------
 
