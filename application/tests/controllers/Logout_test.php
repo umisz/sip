@@ -12,7 +12,7 @@ class Logout_test extends TestCase
         public function test_index() {
             $this->assertFalse( isset($_SESSION['username']) );
             $this->request('GET', 'Logout/index');
-            $this->assertRedirect('Welcome');
+            $this->assertRedirect(base_url('Welcome'));
             $this->assertFalse( isset($_SESSION['username']) );
         }
         
