@@ -15,12 +15,12 @@ class Bayi_test extends TestCase {
         $output = $this->request('GET', 'bayi');
         $this->assertContains('<title>Sistem Informasi Posyandu</title>', $output);
     }
-    
-    public function test_index_bayi_salah() {
+
+    public function test_index_bayi_gagal() {
         $_SESSION['username'] = "titis";
         $_SESSION['status'] = "kosong";
         $output = $this->request('GET', 'bayi');
-        $this->assertRedirect(base_url('Welcome'));
+        $this->assertRedirect(base_url('Welcome'), $output);
     }
 
     public function test_add() {
@@ -95,7 +95,7 @@ class Bayi_test extends TestCase {
             'golonganDarah' => "Belum Tahu",
             'panjangLahir' => '10',
             'beratLahir' => '10']);
-        $this->assertRedirect('Bayi/add');
+        $this->assertRedirect('Bayi/add', $output);
     }
 
     public function test_detail_bayi() {
@@ -115,8 +115,15 @@ class Bayi_test extends TestCase {
     public function test_detail_bayi_golDarBelumTahu() {
         $_SESSION['username'] = "titis";
         $_SESSION['status'] = "login";
-        $output = $this->request('POST', 'Bayi/detail/BAYI0016', ['IDBAYI' => 'BAYI0016']);
+        $output = $this->request('POST', 'Bayi/detail/BAYI0005', ['IDBAYI' => 'BAYI0005']);
         $this->assertContains('<h1 class="page-header">Detail Bayi</h1>', $output);
+    }
+
+    public function test_detail_bayi_gagal() {
+        $_SESSION['username'] = "titis";
+        $_SESSION['status'] = "login";
+        $output = $this->request('POST', 'Bayi/detail/BAYI1', ['IDBAYI' => 'BAYI1']);
+        $this->assertRedirect('Bayi', $output);
     }
 
     public function test_edit_bayi() {
@@ -124,6 +131,13 @@ class Bayi_test extends TestCase {
         $_SESSION['status'] = "login";
         $output = $this->request('POST', 'Bayi/edit/BAYI0003', ['IDBAYI' => 'BAYI0003']);
         $this->assertContains('<title>Sistem Informasi Posyandu</title>', $output);
+    }
+
+    public function test_edit_bayi_gagal() {
+        $_SESSION['username'] = "titis";
+        $_SESSION['status'] = "login";
+        $output = $this->request('POST', 'Bayi/edit/1', ['IDBAYI' => '1']);
+        $this->assertRedirect('Bayi', $output);
     }
 
     public function test_doUpdate() {
@@ -136,6 +150,7 @@ class Bayi_test extends TestCase {
             'beratSekarang' => '10']);
         $this->assertRedirect('Bayi/detail/BAYI0006', $output);
     }
+
     public function test_doUpdate_golDarBelumTahu() {
         $_SESSION['username'] = "titis";
         $_SESSION['status'] = "login";

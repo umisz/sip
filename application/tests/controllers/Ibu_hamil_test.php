@@ -15,6 +15,7 @@ class Ibu_hamil_test extends TestCase {
         $output = $this->request('GET', 'Ibu_hamil');
         $this->assertContains('<title>Sistem Informasi Posyandu</title>', $output);
     }
+
     public function test_index_Ibu_hamil_gagal() {
         $_SESSION['username'] = "titis";
         $_SESSION['status'] = "kosong";
@@ -70,6 +71,13 @@ class Ibu_hamil_test extends TestCase {
         $this->assertContains(' <h1 class="page-header">Edit Data Ibu Hamil</h1>', $output);
     }
 
+    public function test_edit_Ibu_hamil_gagal() {
+        $_SESSION['username'] = "titis";
+        $_SESSION['status'] = "login";
+        $output = $this->request('POST', 'Ibu_hamil/edit/1', ['idIbu' => '1']);
+        $this->assertRedirect('Ibu_hamil', $output);
+    }
+
     public function test_doUpdate() {
         $_SESSION['username'] = "titis";
         $_SESSION['status'] = "login";
@@ -106,6 +114,13 @@ class Ibu_hamil_test extends TestCase {
         $_SESSION['status'] = "login";
         $output = $this->request('POST', 'Ibu_hamil/detail/3171015408850001', ['idIbu' => '3171015408850001']);
         $this->assertContains('<h4><strong>Nomor Identitas</strong></h4>', $output);
+    }
+
+    public function test_detail_Ibu_hamil_gagal() {
+        $_SESSION['username'] = "titis";
+        $_SESSION['status'] = "login";
+        $output = $this->request('POST', 'Ibu_hamil/detail/2', ['idIbu' => '2']);
+        $this->assertRedirect('Ibu_hamil', $output);
     }
 
     public function test_delete_Ibu_hamil() {
