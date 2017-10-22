@@ -64,11 +64,6 @@ class Bayi extends CI_Controller {
         } else {
             $jkDB = 1;
         }
-        if ($golonganDarah == "Belum Tahu") {
-            $gdDB = "BT";
-        } else {
-            $gdDB = $golonganDarah;
-        }
         if ($idBalita == NULL) {
             redirect('Bayi/add');
         } else {
@@ -77,17 +72,14 @@ class Bayi extends CI_Controller {
                 'namaIbu' => $namaIbu, 'namaAyah' => $namaAyah,
                 'tempatLahir' => $tempatLahir, 'tanggalLahir' => $tanggalLahir,
                 'alamatOrtu' => $alamatOrtu, 'anakKe' => $anakKe,
-                'jenisKelamin' => $jkDB, 'golonganDarah' => $gdDB,
+                'jenisKelamin' => $jkDB, 'golonganDarah' => $golonganDarah,
                 'usiaBayi' => $usiaBayi,
                 'beratLahir' => $beratLahir, 'panjangLahir' => $panjangLahir,
                 'beratSekarang' => $beratLahir, 'panjangSekarang' => $panjangLahir
             );
             $res = $this->ModelPosyandu->addData('balita', $tambah_data);
             if ($res >= 1) {
-                redirect('Bayi');
-            }
-        }
-    }
+                redirect('Bayi');}}}
 
     public function informasiBayi($idBalita) {
         $data = $this->ModelPosyandu->getData('balita', '*', 'where idBalita = "' . $idBalita . '"');
@@ -143,6 +135,7 @@ class Bayi extends CI_Controller {
 
     public function doUpdate() {
         $idBalita = $_POST['idBalita'];
+        $tanggalLahir = $_POST['tanggalLahir'];
         $alamatOrtu = $_POST['alamatOrtu'];
         $golonganDarah = $_POST['golonganDarah'];
         $panjangSekarang = $_POST['panjangSekarang'];
@@ -158,17 +151,11 @@ class Bayi extends CI_Controller {
         $datetime2 = new DateTime($now);
         $difference = $datetime1->diff($datetime2)->days;
         $usiaBayi = ceil($difference / 30);
-
-        if ($golonganDarah == "Belum Tahu") {
-            $gdDB = "BT";
-        } else {
-            $gdDB = $golonganDarah;
-        }
         $where = array('idBalita' => $idBalita);
         $res = $this->ModelPosyandu->UpdateData('balita', $update_data, $where);
         if ($res >= 1) {
             redirect('Bayi/detail/' . $idBalita);}}
-
+    
     public function delete($idBalita) {
         $where = array('idBalita' => $idBalita);
         $res = $this->ModelPosyandu->HapusData('balita', $where);
