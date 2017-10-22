@@ -7,7 +7,8 @@ class Bayi extends CI_Controller {
     public function __construct() {
         parent::__construct();
         if ($this->session->userdata('status') != "login") {
-            redirect(base_url("Welcome"));}
+            redirect(base_url("Welcome"));
+        }
         $this->load->model('ModelPosyandu');
     }
 
@@ -71,7 +72,7 @@ class Bayi extends CI_Controller {
         if ($idBalita == NULL) {
             redirect('Bayi/add');
         } else {
-                $tambah_data = array(
+            $tambah_data = array(
                 'idBalita' => $idBalita, 'namaBayi' => $namaBayi,
                 'namaIbu' => $namaIbu, 'namaAyah' => $namaAyah,
                 'tempatLahir' => $tempatLahir, 'tanggalLahir' => $tanggalLahir,
@@ -83,7 +84,10 @@ class Bayi extends CI_Controller {
             );
             $res = $this->ModelPosyandu->addData('balita', $tambah_data);
             if ($res >= 1) {
-                redirect('Bayi');}}}
+                redirect('Bayi');
+            }
+        }
+    }
 
     public function informasiBayi($idBalita) {
         $data = $this->ModelPosyandu->getData('balita', '*', 'where idBalita = "' . $idBalita . '"');
@@ -114,17 +118,27 @@ class Bayi extends CI_Controller {
     }
 
     public function detail($idBalita) {
-        $data = $this->informasiBayi($idBalita);
-        $this->load->view('header');
-        $this->load->view('sidebar');
-        $this->load->view('detail_bayi', $data);
+        $cek = $this->ModelPosyandu->cekId('balita', 'where idBalita = "' . $idBalita . '"');
+        if ($cek > 0) {
+            $data = $this->informasiBayi($idBalita);
+            $this->load->view('header');
+            $this->load->view('sidebar');
+            $this->load->view('detail_bayi', $data);
+        } else {
+            redirect('Bayi');
+        }
     }
 
     public function edit($idBalita) {
-        $data = $this->informasiBayi($idBalita);
-        $this->load->view('header');
-        $this->load->view('sidebar');
-        $this->load->view('edit_bayi', $data);
+        $cek = $this->ModelPosyandu->cekId('balita', 'where idBalita = "' . $idBalita . '"');
+        if ($cek > 0) {
+            $data = $this->informasiBayi($idBalita);
+            $this->load->view('header');
+            $this->load->view('sidebar');
+            $this->load->view('edit_bayi', $data);
+        } else {
+            redirect('Bayi');
+        }
     }
 
     public function doUpdate() {

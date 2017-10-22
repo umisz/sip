@@ -6,8 +6,9 @@ class Ibu_hamil extends CI_Controller {
 
     public function __construct() {
         parent::__construct();
-        if($this->session->userdata('status') != "login"){
-			redirect(base_url("Welcome"));}
+        if ($this->session->userdata('status') != "login") {
+            redirect(base_url("Welcome"));
+        }
         $this->load->model('ModelPosyandu');
     }
 
@@ -73,7 +74,7 @@ class Ibu_hamil extends CI_Controller {
 
         if (!isset($idIbu) || trim($idIbu) == '') {
             redirect('Ibu_hamil/add');
-        }else{
+        } else {
             $tambah_data = array(
                 'idIbu' => $idIbu, 'namaBumil' => $namaBumil, 'namaSuami' => $namaSuami,
                 'tempatLahir' => $tempatLahir, 'tanggalLahir' => $tanggalLahir,
@@ -102,29 +103,39 @@ class Ibu_hamil extends CI_Controller {
             redirect('Ibu_hamil/detail/' . $idIbu);}}
 
     public function detail($idIbu) {
-        $data = $this->ModelPosyandu->getData('ibuhamil', '*', 'where idIbu = ' . $idIbu);
-        $status = $this->hitungBBIdeal($idIbu);
-        $dataIbu = array('idIbu' => $data[0]['idIbu'],
-            'namaBumil' => $data[0]['namaBumil'], 'namaSuami' => $data[0]['namaSuami'],
-            'alamatBumil' => $data[0]['alamatBumil'], 'umur' => $data[0]['umur'],
-            'usiaKandungan' => $data[0]['usiaKandungan'], 'kandunganKe' => $data[0]['kandunganKe'],
-            'tempatLahir' => $data[0]['tempatLahir'], 'tanggalLahir' => $data[0]['tanggalLahir'],
-            'beratUpdate' => $data[0]['beratUpdate'], 'beratAwal' => $data[0]['beratAwal'],
-            'tinggiIbu' => $data[0]['tinggiIbu'],
-            'hpht' => $data[0]['hpht'], 'perkiraanLahir' => $data[0]['perkiraanLahir'],
-            'status' => $status
-        );
-        $this->load->view('header');
-        $this->load->view('sidebar');
-        $this->load->view('detail_ibuhamil', $dataIbu);
+        $cek = $this->ModelPosyandu->cekId('ibuhamil', 'where idIbu = ' . $idIbu);
+        if ($cek > 0) {
+            $data = $this->ModelPosyandu->getData('ibuhamil', '*', 'where idIbu = ' . $idIbu);
+            $status = $this->hitungBBIdeal($idIbu);
+            $dataIbu = array('idIbu' => $data[0]['idIbu'],
+                'namaBumil' => $data[0]['namaBumil'], 'namaSuami' => $data[0]['namaSuami'],
+                'alamatBumil' => $data[0]['alamatBumil'], 'umur' => $data[0]['umur'],
+                'usiaKandungan' => $data[0]['usiaKandungan'], 'kandunganKe' => $data[0]['kandunganKe'],
+                'tempatLahir' => $data[0]['tempatLahir'], 'tanggalLahir' => $data[0]['tanggalLahir'],
+                'beratUpdate' => $data[0]['beratUpdate'], 'beratAwal' => $data[0]['beratAwal'],
+                'tinggiIbu' => $data[0]['tinggiIbu'],
+                'hpht' => $data[0]['hpht'], 'perkiraanLahir' => $data[0]['perkiraanLahir'],
+                'status' => $status
+            );
+            $this->load->view('header');
+            $this->load->view('sidebar');
+            $this->load->view('detail_ibuhamil', $dataIbu);
+        } else {
+            redirect('Ibu_hamil');
+        }
     }
 
     public function edit($idIbu) {
-        $data = $this->ModelPosyandu->getData('ibuhamil', '*', 'where idIbu = ' . $idIbu);
-        $dataIbu = array('idIbu' => $data[0]['idIbu']);
-        $this->load->view('header');
-        $this->load->view('sidebar');
-        $this->load->view('edit_ibuhamil', $dataIbu);
+        $cek = $this->ModelPosyandu->cekId('ibuhamil', 'where idIbu = ' . $idIbu);
+        if ($cek > 0) {
+            $data = $this->ModelPosyandu->getData('ibuhamil', '*', 'where idIbu = ' . $idIbu);
+            $dataIbu = array('idIbu' => $data[0]['idIbu']);
+            $this->load->view('header');
+            $this->load->view('sidebar');
+            $this->load->view('edit_ibuhamil', $dataIbu);
+        } else {
+            redirect('Ibu_hamil');
+        }
     }
 
     public function delete($idIbu) {
