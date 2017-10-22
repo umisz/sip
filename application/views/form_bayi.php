@@ -10,7 +10,7 @@
                 <div class="panel-body">
                     <div class="row">
                         <div class="col-lg-12">
-                            <form method ="POST" action="<?php echo base_url()."index.php/Bayi/processAdd/"?>">
+                            <form method ="POST" action="<?php echo base_url() . "index.php/Bayi/processAdd/" ?>">
                                 <div class="col-lg-6">
                                     <h2>Informasi Pribadi</h2>
                                     <hr>
@@ -55,62 +55,61 @@
                                     <h2>Informasi Kesehatan</h2>
                                     <hr>
                                     <div class="col-lg-6">
-                                         <div class="form-group">
+                                        <div class="form-group">
                                             <label>Jenis Kelamin</label>
-                                                <br>
-                                                <label class="radio-inline">
-                                                    <input type="radio" name="jenisKelamin" id="optionsRadiosInline1" value="1" checked>Laki - Laki
-                                                </label>
-                                                <label class="radio-inline">
-                                                    <input type="radio" name="jenisKelamin" id="optionsRadiosInline2" value="2">Perempuan
-                                                </label>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-6">
-                                        <div class="form-group">
-                                            <label>Golongan Darah</label>
-                                            <select class="form-control" name="golonganDarah" required>
-                                                <option value="A">A</option>
-                                                <option value="B">B</option>
-                                                <option value="AB">AB</option>
-                                                <option value="O">O</option>
-                                                <option value="Belum Tahu">Belum Tahu</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-5">
-                                        <div class="form-group">
-                                            <label>Panjang Lahir</label>
-                                            <input class="form-control" title="Panjang Lahir" type="number" step="0.01" name="panjangLahir" placeholder="dalam cm" required>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-5">
-                                        <div class="form-group">
-                                            <label>Berat Lahir</label>
-                                            <input class="form-control" title="Berat Lahir" type="number" step="0.01" name="beratLahir" placeholder="dalam kg" required>
+                                            <br>
+                                            <label class="radio-inline">
+                                                <input type="radio" name="jenisKelamin" id="optionsRadiosInline1" value="1" checked>Laki - Laki
+                                            </label>
+                                            <label class="radio-inline">
+                                                <input type="radio" name="jenisKelamin" id="optionsRadiosInline2" value="2">Perempuan
+                                            </label>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-lg-12 text-center">
-                                    <button type="submit" class="btn btn-info" style="width: 25%">Daftar</button>
+                                <div class="col-lg-6">
+                                    <div class="form-group">
+                                        <label>Golongan Darah</label>
+                                        <select class="form-control" name="golonganDarah" required>
+                                            <option value="A">A</option>
+                                            <option value="B">B</option>
+                                            <option value="AB">AB</option>
+                                            <option value="O">O</option>
+                                            <option value="BT">Belum Tahu</option>
+                                        </select>
+                                    </div>
                                 </div>
-                            </form>
+                                <div class="col-lg-5">
+                                    <div class="form-group">
+                                        <label>Panjang Lahir</label>
+                                        <input class="form-control" title="Panjang Lahir" type="number" step="0.01" name="panjangLahir" placeholder="dalam cm" required>
+                                    </div>
+                                </div>
+                                <div class="col-lg-5">
+                                    <div class="form-group">
+                                        <label>Berat Lahir</label>
+                                        <input class="form-control" title="Berat Lahir" type="number" step="0.01" name="beratLahir" placeholder="dalam kg" required>
+                                    </div>
+                                </div>
                         </div>
+                        <div class="col-lg-12 text-center">
+                            <button type="submit" class="btn btn-info" style="width: 25%">Daftar</button>
+                        </div>
+                        </form>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
+</div>
 
 <script type="text/javascript">
     function hanyaHuruf(evt) {
-      var charCode = (evt.which) ? evt.which : event.keyCode
-      if (charCode >32 && (charCode < 65 || charCode > 90) && (charCode < 97 || charCode > 122) && charCode > 39)
-
-        return false;
-      return true;
+        var charCode = (evt.which) ? evt.which : event.keyCode
+        if (charCode > 32 && (charCode < 65 || charCode > 90) && (charCode < 97 || charCode > 122) && charCode > 39)
+            return false;
+        return true;
     }
 </script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
