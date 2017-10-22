@@ -31,11 +31,9 @@ class Bayi extends CI_Controller {
         $lastId = array('last' => $bayi[0]['last']);
         $last = implode("", $lastId);
         $kode = "";
+        $baru = 1;
         if ($data->num_rows() > 0) {
             $baru = $last + 1;
-            $kode = str_pad($baru, 4, "0", STR_PAD_LEFT);
-        } else {
-            $baru = 1;
             $kode = str_pad($baru, 4, "0", STR_PAD_LEFT);
         }
         $namaBayi = $_POST['namaBayi'];
