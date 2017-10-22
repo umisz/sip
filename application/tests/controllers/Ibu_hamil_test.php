@@ -67,7 +67,7 @@ class Ibu_hamil_test extends TestCase {
         $_SESSION['username'] = "titis";
         $_SESSION['status'] = "login";
         $output = $this->request('POST', 'Ibu_hamil/edit/3171015408850002', ['idIbu' => '3171015408850002']);
-        $this->assertContains(' <h1 class="page-header">Tambahkan Data Ibu Hamil</h1>', $output);
+        $this->assertContains(' <h1 class="page-header">Edit Data Ibu Hamil</h1>', $output);
     }
 
     public function test_doUpdate() {
