@@ -1,7 +1,7 @@
 <div id="page-wrapper">
     <div class="row">
         <div class="col-lg-12">
-            <h1 class="page-header">Perbarui Data Bayi</h1>
+            <h1 class="page-header">Edit Data Bayi</h1>
         </div>
     </div>
     <div class="row">
