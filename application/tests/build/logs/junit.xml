@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite name="CodeIgniter Application Test Suite" tests="35" assertions="37" failures="0" errors="0" time="3.296721">
+    <testsuite name="Bayi_test" file="C:\xampp\htdocs\posyandu\application\tests\controllers\Bayi_test.php" fullPackage="Bayi" tests="16" assertions="16" failures="0" errors="0" time="1.675065">
+      <testcase name="test_index_bayi" class="Bayi_test" file="C:\xampp\htdocs\posyandu\application\tests\controllers\Bayi_test.php" line="12" assertions="1" time="0.091273"/>
+      <testcase name="test_index_bayi_gagal" class="Bayi_test" file="C:\xampp\htdocs\posyandu\application\tests\controllers\Bayi_test.php" line="19" assertions="1" time="0.070154"/>
+      <testcase name="test_add" class="Bayi_test" file="C:\xampp\htdocs\posyandu\application\tests\controllers\Bayi_test.php" line="26" assertions="1" time="0.069898"/>
+      <testcase name="test_processAdd" class="Bayi_test" file="C:\xampp\htdocs\posyandu\application\tests\controllers\Bayi_test.php" line="33" assertions="1" time="0.154489"/>
+      <testcase name="test_processAdd_jk" class="Bayi_test" file="C:\xampp\htdocs\posyandu\application\tests\controllers\Bayi_test.php" line="50" assertions="1" time="0.181563"/>
+      <testcase name="test_processAdd_Gagal" class="Bayi_test" file="C:\xampp\htdocs\posyandu\application\tests\controllers\Bayi_test.php" line="67" assertions="1" time="0.075918"/>
+      <testcase name="test_detail_bayi" class="Bayi_test" file="C:\xampp\htdocs\posyandu\application\tests\controllers\Bayi_test.php" line="84" assertions="1" time="0.085272"/>
+      <testcase name="test_detail_bayi_perempuan" class="Bayi_test" file="C:\xampp\htdocs\posyandu\application\tests\controllers\Bayi_test.php" line="91" assertions="1" time="0.087265"/>
+      <testcase name="test_detail_bayi_golDarBelumTahu" class="Bayi_test" file="C:\xampp\htdocs\posyandu\application\tests\controllers\Bayi_test.php" line="98" assertions="1" time="0.071207"/>
+      <testcase name="test_detail_bayi_gagal" class="Bayi_test" file="C:\xampp\htdocs\posyandu\application\tests\controllers\Bayi_test.php" line="105" assertions="1" time="0.056214"/>
+      <testcase name="test_edit_bayi" class="Bayi_test" file="C:\xampp\htdocs\posyandu\application\tests\controllers\Bayi_test.php" line="112" assertions="1" time="0.069319"/>
+      <testcase name="test_edit_bayi_gagal" class="Bayi_test" file="C:\xampp\htdocs\posyandu\application\tests\controllers\Bayi_test.php" line="119" assertions="1" time="0.056193"/>
+      <testcase name="test_doUpdate" class="Bayi_test" file="C:\xampp\htdocs\posyandu\application\tests\controllers\Bayi_test.php" line="126" assertions="1" time="0.134634"/>
+      <testcase name="test_doUpdate_golDarBelumTahu" class="Bayi_test" file="C:\xampp\htdocs\posyandu\application\tests\controllers\Bayi_test.php" line="137" assertions="1" time="0.155770"/>
+      <testcase name="test_delete_bayi" class="Bayi_test" file="C:\xampp\htdocs\posyandu\application\tests\controllers\Bayi_test.php" line="148" assertions="1" time="0.157613"/>
+      <testcase name="test_delete_bayi_perempuan" class="Bayi_test" file="C:\xampp\htdocs\posyandu\application\tests\controllers\Bayi_test.php" line="155" assertions="1" time="0.158283"/>
+    </testsuite>
+    <testsuite name="Ibu_hamil_test" file="C:\xampp\htdocs\posyandu\application\tests\controllers\Ibu_hamil_test.php" fullPackage="Ibu.hamil" tests="14" assertions="14" failures="0" errors="0" time="1.289075">
+      <testcase name="test_index_Ibu_hamil" class="Ibu_hamil_test" file="C:\xampp\htdocs\posyandu\application\tests\controllers\Ibu_hamil_test.php" line="12" assertions="1" time="0.111401"/>
+      <testcase name="test_index_Ibu_hamil_gagal" class="Ibu_hamil_test" file="C:\xampp\htdocs\posyandu\application\tests\controllers\Ibu_hamil_test.php" line="19" assertions="1" time="0.064867"/>
+      <testcase name="test_add" class="Ibu_hamil_test" file="C:\xampp\htdocs\posyandu\application\tests\controllers\Ibu_hamil_test.php" line="26" assertions="1" time="0.074918"/>
+      <testcase name="test_processAdd" class="Ibu_hamil_test" file="C:\xampp\htdocs\posyandu\application\tests\controllers\Ibu_hamil_test.php" line="33" assertions="1" time="0.124817"/>
+      <testcase name="test_processAdd_gagal" class="Ibu_hamil_test" file="C:\xampp\htdocs\posyandu\application\tests\controllers\Ibu_hamil_test.php" line="50" assertions="1" time="0.068628"/>
+      <testcase name="test_edit_Ibu_hamil" class="Ibu_hamil_test" file="C:\xampp\htdocs\posyandu\application\tests\controllers\Ibu_hamil_test.php" line="67" assertions="1" time="0.079675"/>
+      <testcase name="test_edit_Ibu_hamil_gagal" class="Ibu_hamil_test" file="C:\xampp\htdocs\posyandu\application\tests\controllers\Ibu_hamil_test.php" line="74" assertions="1" time="0.059273"/>
+      <testcase name="test_doUpdate" class="Ibu_hamil_test" file="C:\xampp\htdocs\posyandu\application\tests\controllers\Ibu_hamil_test.php" line="81" assertions="1" time="0.144952"/>
+      <testcase name="test_detail_Ibu_hamil" class="Ibu_hamil_test" file="C:\xampp\htdocs\posyandu\application\tests\controllers\Ibu_hamil_test.php" line="91" assertions="1" time="0.083536"/>
+      <testcase name="test_detail_Ibu_hamil_middle" class="Ibu_hamil_test" file="C:\xampp\htdocs\posyandu\application\tests\controllers\Ibu_hamil_test.php" line="98" assertions="1" time="0.088090"/>
+      <testcase name="test_detail_Ibu_hamil_pendek" class="Ibu_hamil_test" file="C:\xampp\htdocs\posyandu\application\tests\controllers\Ibu_hamil_test.php" line="105" assertions="1" time="0.113979"/>
+      <testcase name="test_detail_Ibu_hamil_ideal" class="Ibu_hamil_test" file="C:\xampp\htdocs\posyandu\application\tests\controllers\Ibu_hamil_test.php" line="112" assertions="1" time="0.077238"/>
+      <testcase name="test_detail_Ibu_hamil_gagal" class="Ibu_hamil_test" file="C:\xampp\htdocs\posyandu\application\tests\controllers\Ibu_hamil_test.php" line="119" assertions="1" time="0.056745"/>
+      <testcase name="test_delete_Ibu_hamil" class="Ibu_hamil_test" file="C:\xampp\htdocs\posyandu\application\tests\controllers\Ibu_hamil_test.php" line="126" assertions="1" time="0.140957"/>
+    </testsuite>
+    <testsuite name="Login_test" file="C:\xampp\htdocs\posyandu\application\tests\controllers\Login_test.php" fullPackage="Login" tests="3" assertions="3" failures="0" errors="0" time="0.238870">
+      <testcase name="test_login" class="Login_test" file="C:\xampp\htdocs\posyandu\application\tests\controllers\Login_test.php" line="12" assertions="1" time="0.090417"/>
+      <testcase name="test_login_error" class="Login_test" file="C:\xampp\htdocs\posyandu\application\tests\controllers\Login_test.php" line="17" assertions="1" time="0.079964"/>
+      <testcase name="test_index" class="Login_test" file="C:\xampp\htdocs\posyandu\application\tests\controllers\Login_test.php" line="22" assertions="1" time="0.068489"/>
+    </testsuite>
+    <testsuite name="Logout_test" file="C:\xampp\htdocs\posyandu\application\tests\controllers\Logout_test.php" fullPackage="Logout" tests="1" assertions="3" failures="0" errors="0" time="0.057717">
+      <testcase name="test_index" class="Logout_test" file="C:\xampp\htdocs\posyandu\application\tests\controllers\Logout_test.php" line="12" assertions="3" time="0.057717"/>
+    </testsuite>
+    <testsuite name="Welcome_test" file="C:\xampp\htdocs\posyandu\application\tests\controllers\Welcome_test.php" fullPackage="Welcome" tests="1" assertions="1" failures="0" errors="0" time="0.035993">
+      <testcase name="test_index" class="Welcome_test" file="C:\xampp\htdocs\posyandu\application\tests\controllers\Welcome_test.php" line="6" assertions="1" time="0.035993"/>
+    </testsuite>
+  </testsuite>
+</testsuites>
