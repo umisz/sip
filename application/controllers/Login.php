@@ -13,12 +13,28 @@ class Login extends CI_Controller {
 		$data['err_message'] = "";
 		$this->load->view('login',$data);
   }
+  function Encipher($paswd, $key, $key1){
+	  	$arrHuruf = str_split($paswd);
+	  	$enkripsi = "";
+	  	foreach ($arrHuruf as $tmp){
+	    	$enkripsi .= chr(ord($tmp)+$key);
+  		}	
+  		$arrEnkripsi = str_split($enkripsi);
+  		$enkrip1 = "";
+
+  		foreach ($arrEnkripsi as $tmp1){
+	    	$enkrip1 .= chr(ord($tmp1)-$key1);
+  		}	
+  		return $enkrip1;
+ 	}
 
   function aksi_login()
   {
   		$username = $this->input->post('username');
 		$pass = $this->input->post('password');
-		$password = md5($pass);
+
+		$secure = $this->Encipher($pass,3,6);
+		$password = sha1(md5($secure));
 
 		$where = array(
 			'username' => $username,
