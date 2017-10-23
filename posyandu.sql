@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: 22 Okt 2017 pada 16.37
+-- Generation Time: 23 Okt 2017 pada 11.38
 -- Versi Server: 10.1.21-MariaDB
 -- PHP Version: 7.1.1
 
@@ -107,8 +107,8 @@ CREATE TABLE `kader_admin` (
 --
 
 INSERT INTO `kader_admin` (`id`, `username`, `password`) VALUES
-(1, 'admin', '0192023a7bbd73250516f069df18b500'),
-(2, 'titis', 'd829b843a6550a947e82f2f38ed6b7a7');
+(1, 'admin', '37de2f53894018e662b274c262dd5ee98e5c956f'),
+(2, 'titis', '67ff31efdbabf3097d6e3d84c6028ce8a1afb661');
 
 --
 -- Indexes for dumped tables
