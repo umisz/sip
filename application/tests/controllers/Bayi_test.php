@@ -81,6 +81,40 @@ class Bayi_test extends TestCase {
         $this->assertRedirect('Bayi/add', $output);
     }
 
+    public function test_processAdd_KosongSebagian() {
+        $_SESSION['username'] = "titis";
+        $_SESSION['status'] = "login";
+        $output = $this->request('POST', 'Bayi/processAdd', ['namaBayi' => NULL,
+            'namaIbu' => NULL,
+            'namaAyah' => NULL,
+            'tempatLahir' => NULL,
+            'tanggalLahir' => NULL,
+            'anakKe' => NULL,
+            'alamatOrtu' => 'alamat',
+            'jenisKelamin' => 1,
+            'golonganDarah' => "Belum Tahu",
+            'panjangLahir' => '10',
+            'beratLahir' => '10']);
+        $this->assertRedirect('Bayi/add', $output);
+    }
+
+    public function test_processAdd_KosongSemua() {
+        $_SESSION['username'] = "titis";
+        $_SESSION['status'] = "login";
+        $output = $this->request('POST', 'Bayi/processAdd', ['namaBayi' => NULL,
+            'namaIbu' => NULL,
+            'namaAyah' => NULL,
+            'tempatLahir' => NULL,
+            'tanggalLahir' => NULL,
+            'anakKe' => NULL,
+            'alamatOrtu' => NULL,
+            'jenisKelamin' => NULL,
+            'golonganDarah' => NULL,
+            'panjangLahir' => NULL,
+            'beratLahir' => NULL]);
+        $this->assertRedirect('Bayi/add', $output);
+    }
+
     public function test_detail_bayi() {
         $_SESSION['username'] = "titis";
         $_SESSION['status'] = "login";
@@ -143,6 +177,16 @@ class Bayi_test extends TestCase {
             'panjangSekarang' => '10',
             'beratSekarang' => '10']);
         $this->assertRedirect('Bayi/detail/BAYI0002', $output);
+    }
+    public function test_doUpdate_gagal() {
+        $_SESSION['username'] = "titis";
+        $_SESSION['status'] = "login";
+        $output = $this->request('POST', 'Bayi/doUpdate', ['idBalita' => 'BAYI0002',
+            'alamatOrtu' => 'alamat',
+            'golonganDarah' => "BT",
+            'panjangSekarang' => NULL,
+            'beratSekarang' => NULL]);
+        $this->assertRedirect('Bayi/edit/BAYI0002', $output);
     }
 
     public function test_delete_bayi() {

@@ -27,7 +27,9 @@ class Ibu_hamil_test extends TestCase {
         $_SESSION['username'] = "titis";
         $_SESSION['status'] = "login";
         $output = $this->request('GET', 'Ibu_hamil/add');
+        $this->assertContains('<h1 class="page-header">Tambahkan Data Ibu Hamil</h1>', $output);
         $this->assertContains('<title>Sistem Informasi Posyandu</title>', $output);
+        $this->assertContains('<div class="sidebar-nav navbar-collapse">', $output);
     }
 
     public function test_processAdd() {
@@ -86,6 +88,15 @@ class Ibu_hamil_test extends TestCase {
             'tinggiIbu' => "165",
             'beratUpdate' => '54',]);
         $this->assertRedirect('Ibu_hamil/detail/' . '3171015408850002', $output);
+    }
+    public function test_doUpdate_gagal() {
+        $_SESSION['username'] = "titis";
+        $_SESSION['status'] = "login";
+        $output = $this->request('POST', 'Ibu_hamil/doUpdate', ['idIbu' => '3171015408850002',
+            'usiaKandungan' => '6',
+            'tinggiIbu' => NULL,
+            'beratUpdate' => NULL,]);
+        $this->assertRedirect('Ibu_hamil/edit/' . '3171015408850002', $output);
     }
 
     public function test_detail_Ibu_hamil() {
