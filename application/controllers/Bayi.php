@@ -47,12 +47,11 @@ class Bayi extends CI_Controller {
         $golonganDarah = $_POST['golonganDarah'];
         $panjangLahir = $_POST['panjangLahir'];
         $beratLahir = $_POST['beratLahir'];
-        if (!isset($namaBayi) || trim($namaBayi) == '') {
+        if (!isset($namaBayi) || trim($namaBayi) == '' || !isset($namaIbu) || trim($namaIbu) == '' || !isset($namaAyah) || trim($namaAyah) == '' || !isset($tempatLahir) || trim($tempatLahir) == '' || !isset($tanggalLahir) || trim($tanggalLahir) == '' || !isset($alamatOrtu) || trim($alamatOrtu) == '' || !isset($anakKe) || trim($anakKe) == '' || !isset($jenisKelamin) || trim($jenisKelamin) == '' || !isset($golonganDarah) || trim($golonganDarah) == '' || !isset($panjangLahir) || trim($panjangLahir) == '' || !isset($beratLahir) || trim($beratLahir) == '') {
             $idBalita = NULL;
         } else {
             $idBalita = 'BAYI' . $kode;
         }
-        echo $idBalita;
         $now = date("Y-m-d");
         $datetime1 = new DateTime($tanggalLahir);
         $datetime2 = new DateTime($now);
@@ -140,22 +139,21 @@ class Bayi extends CI_Controller {
         $golonganDarah = $_POST['golonganDarah'];
         $panjangSekarang = $_POST['panjangSekarang'];
         $beratSekarang = $_POST['beratSekarang'];
-        $update_data = array(
-            'alamatOrtu' => $alamatOrtu,
-            'golonganDarah' => $golonganDarah,
-            'panjangSekarang' => $panjangSekarang,
-            'beratSekarang' => $beratSekarang
-        );
-        $now = date("Y-m-d");
-        $datetime1 = new DateTime($tanggalLahir);
-        $datetime2 = new DateTime($now);
-        $difference = $datetime1->diff($datetime2)->days;
-        $usiaBayi = ceil($difference / 30);
-        $where = array('idBalita' => $idBalita);
-        $res = $this->ModelPosyandu->UpdateData('balita', $update_data, $where);
-        if ($res >= 1) {
-            redirect('Bayi/detail/' . $idBalita);}}
-    
+        if (!isset($panjangSekarang) || trim($panjangSekarang) == '' ||
+                !isset($beratSekarang) || trim($beratSekarang) == '') {
+            redirect('Bayi/edit/' . $idBalita);
+        } else {
+            $update_data = array(
+                'alamatOrtu' => $alamatOrtu,
+                'golonganDarah' => $golonganDarah,
+                'panjangSekarang' => $panjangSekarang,
+                'beratSekarang' => $beratSekarang
+            );
+            $where = array('idBalita' => $idBalita);
+            $res = $this->ModelPosyandu->UpdateData('balita', $update_data, $where);
+            if ($res >= 1) {
+                redirect('Bayi/detail/' . $idBalita);}}}
+
     public function delete($idBalita) {
         $where = array('idBalita' => $idBalita);
         $res = $this->ModelPosyandu->HapusData('balita', $where);

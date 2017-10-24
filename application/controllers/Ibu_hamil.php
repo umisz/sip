@@ -67,12 +67,16 @@ class Ibu_hamil extends CI_Controller {
         $difference = $datetime1->diff($datetime2)->days;
         $umur = ceil($difference / 365);
 
-
         $bulan = date('Y-m-d', strtotime('-3 month', strtotime($hpht)));
         $tanggal = date('Y-m-d', strtotime('+7 days', strtotime($bulan)));
         $perkiraanLahir = date('Y-m-d', strtotime('+1 year', strtotime($tanggal)));
 
-        if (!isset($idIbu) || trim($idIbu) == '') {
+        if (!isset($idIbu) || trim($idIbu) == '' ||
+                !isset($namaBumil) || trim($namaBumil) == '' || !isset($namaSuami) || trim($namaSuami) == '' ||
+                !isset($tempatLahir) || trim($tempatLahir) == '' || !isset($tanggalLahir) || trim($tanggalLahir) == '' ||
+                !isset($kandunganKe) || trim($kandunganKe) == '' || !isset($usiaKandungan) || trim($usiaKandungan) == '' ||
+                !isset($alamatBumil) || trim($alamatBumil) == '' || !isset($hpht) || trim($hpht) == '' ||
+                !isset($tinggiIbu) || trim($tinggiIbu) == '' || !isset($beratAwal) || trim($beratAwal) == '') {
             redirect('Ibu_hamil/add');
         } else {
             $tambah_data = array(
@@ -92,15 +96,19 @@ class Ibu_hamil extends CI_Controller {
         $usiaKandungan = $_POST['usiaKandungan'];
         $tinggiIbu = $_POST['tinggiIbu'];
         $beratUpdate = $_POST['beratUpdate'];
-        $update_data = array(
-            'usiaKandungan' => $usiaKandungan,
-            'tinggiIbu' => $tinggiIbu,
-            'beratUpdate' => $beratUpdate
-        );
-        $where = array('idIbu' => $idIbu);
-        $res = $this->ModelPosyandu->UpdateData('ibuhamil', $update_data, $where);
-        if ($res >= 1) {
-            redirect('Ibu_hamil/detail/' . $idIbu);}}
+        if (!isset($usiaKandungan) || trim($usiaKandungan) == '' ||
+            !isset($beratUpdate) || trim($beratUpdate) == '') {
+            redirect('Ibu_hamil/edit/' . $idIbu);
+        } else {
+            $update_data = array(
+                'usiaKandungan' => $usiaKandungan,
+                'tinggiIbu' => $tinggiIbu,
+                'beratUpdate' => $beratUpdate
+            );
+            $where = array('idIbu' => $idIbu);
+            $res = $this->ModelPosyandu->UpdateData('ibuhamil', $update_data, $where);
+            if ($res >= 1) {
+                redirect('Ibu_hamil/detail/' . $idIbu);}}}
 
     public function detail($idIbu) {
         $cek = $this->ModelPosyandu->cekId('ibuhamil', 'where idIbu = ' . $idIbu);
